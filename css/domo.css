@@ -8846,12 +8846,21 @@ header.intro #mobile {
 }
 
 header.intro #mobile-image {
-  display: none;
+  opacity: 0;
   width: 361px;
   position: absolute;
   top: 150px;
   right: 250px;
   z-index: 1000;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  filter: brightness(3);
+}
+
+header.intro #mobile-image.visible {
+  opacity: 1;
+  filter: brightness(1);
 }
 
 /*

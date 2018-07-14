@@ -51,11 +51,17 @@ header.intro {
     z-index: 999;
   }
   #mobile-image {
-    display: none;
+    opacity: 0;
     width: 361px;
     position: absolute;
     top: 150px;
     right: 250px;
     z-index: 1000;
+    @include transition-all;
+    filter: brightness(3);
+    &.visible {
+      opacity: 1;
+      filter: brightness(1);
+    }
   }
 }

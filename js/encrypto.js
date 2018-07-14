@@ -615,7 +615,8 @@ $(window).on('load', function () {
 $(window).on('load', function () {
     if ($('#mobile').length > 0) {
         var anim = new Vivus('mobile-svg', { duration: 100, type: 'sync', start: 'autostart', forceRender: false}, function () {
-            $('#mobile-image').fadeIn('slow');
+            //$('#mobile-image').fadeIn('slow');
+            $('#mobile-image').addClass('visible');
         });
     }
 });
