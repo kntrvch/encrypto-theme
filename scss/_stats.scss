@@ -1,0 +1,44 @@
+// Styling for the stats section
+
+#stats {
+  .stats-box {
+    padding-bottom: 1rem;
+    span {
+      color: $primary;
+      font-size: 4rem;
+      font-weight: 300;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    &::before, 
+    &::after {
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 1px;
+      background: $gray-100;
+      top: 0;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+    
+  }
+  [class^="col-"] {
+    &:first-of-type .stats-box::before, 
+    &:last-of-type .stats-box::after {
+      width: 2px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    [class^="col-"] .stats-box::before, 
+    [class^="col-"] .stats-box::after {
+      content: none;
+    }
+  }
+}

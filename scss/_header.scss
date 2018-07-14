@@ -1,0 +1,61 @@
+// Styling for the header
+header.intro {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  @include background-cover;
+  background-color: rgba(0,0,0,.8);
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    span {
+      @include transition-all;
+    }
+  }
+  p {
+    font-weight: 300;
+  }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.15rem;
+    }
+  }
+  @media (min-width: 992px) {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  .gradient-bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+  }
+  #mobile {
+    position: absolute;
+    top: 150px;
+    right: 250px;
+    z-index: 999;
+  }
+  #mobile-image {
+    display: none;
+    width: 361px;
+    position: absolute;
+    top: 150px;
+    right: 250px;
+    z-index: 1000;
+  }
+}

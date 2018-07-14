@@ -1,0 +1,119 @@
+@import "../node_modules/bootstrap-rubygem/assets/stylesheets/bootstrap/mixins";
+@import "mixins.scss";
+@import "variables.scss";
+@import "../node_modules/bootstrap-rubygem/assets/stylesheets/bootstrap";
+
+
+/*
+* === Global ===
+*/
+
+@import "global.scss";
+
+/*
+* === Navbar ===
+*/
+
+@import "navbar.scss";
+
+/*
+* === Header section ===
+*/
+
+@import "header.scss";
+
+/*
+* === Services section ===
+*/
+
+//@import "services.scss";
+
+/*
+* === Stats section ===
+*/
+
+@import "stats.scss";
+
+/*
+* === Sale section ===
+*/
+
+@import "sale.scss";
+
+/*
+* === Features section ===
+*/
+
+//@import "features.scss";
+
+/*
+* === Pricing section ===
+*/
+
+@import "pricing.scss";
+
+/*
+* === Testimonials section ===
+*/
+
+//@import "testimonials.scss";
+
+/*
+* === News section ===
+*/
+
+//@import "news.scss";
+
+/*
+* === Team section ===
+*/
+
+//@import "team.scss";
+
+/*
+* === Partners section ===
+*/
+
+@import "partners.scss";
+
+/*
+* === Contact section ===
+*/
+
+@import "contact.scss";
+
+/*
+* === Map section ===
+*/
+
+@import "map.scss";
+
+/*
+* === Timeline ===
+*/
+
+@import "timeline.scss";
+
+/*
+* === Footer ===
+*/
+
+@import "footer.scss";
+
+/*
+* === Preloader ===
+*/
+
+@import "preloader.scss";
+
+/*
+* === Error page ===
+*/
+
+//@import "error.scss";
+
+/*
+* === Bootstrap overrides ===
+*/
+
+@import "bootstrap-overrides.scss";

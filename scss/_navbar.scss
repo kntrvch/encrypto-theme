@@ -1,0 +1,136 @@
+// Styling for the navbar
+#mainNav {
+  border: none;
+  background-color: $white;
+  @include sans-serif-font;
+  @include transition-all;
+  .navbar-brand {
+    text-transform: uppercase;
+    color: $primary;
+    @include sans-serif-font;
+    .fa {
+      float: left;
+      margin-right: 5px;
+      font-size: 1.5rem;
+      @include transition-all;
+      color: $primary;
+      path {
+        @include transition-all;
+        fill: $primary;
+      }
+    }
+  }
+  .navbar-nav {
+    > li.nav-item {
+       > a.nav-link,
+      > a.nav-link:focus {
+        text-transform: uppercase;
+        color: $gray-900;
+        @include transition-all;
+        &:hover {
+          color: $primary;
+        }
+        &.active {
+          color: $primary !important;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+    outline: none;
+  }
+
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {
+    border: none;
+    background-color: transparent;
+    .navbar-brand {
+      color: $white;
+      @include transition-all;
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+      .fa {
+        @include transition-all;
+        color: $primary;
+      }
+    }
+    .navbar-nav > li.nav-item > a.nav-link {
+      border: 1px solid transparent;
+      padding: 2.5rem 1rem;
+      line-height: 1.5rem;
+      @include transition-all;
+    }
+    .navbar-nav > li.nav-item > a.nav-link,
+    .navbar-nav > li.nav-item > a.nav-link:focus {
+      color: fade-out($white, .3);
+      &:hover {
+        color: $white;
+      }
+    }
+    &.navbar-shrink {
+      border: none;
+      background-color: $black;
+      box-shadow: 0 1px 1px rgba(255,255,255,.2);
+      .navbar-brand {
+        color: $primary;
+        &:focus,
+        &:hover {
+          color: darken($primary, .1);
+        }
+        .fa {
+          @include transition-all;
+          color: $primary;
+        }
+      }
+      .navbar-nav > li.nav-item > a.nav-link,
+      .navbar-nav > li.nav-item > a.nav-link:focus {
+        padding: 1rem 1rem;
+        border: 1px solid transparent;
+        @include transition-all;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .language-select {
+    float: right;
+    .language-select__btn {
+      background: transparent;
+      text-transform: uppercase;
+      color: fade-out($white, .3);
+      outline: none;
+        &:hover, 
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          color: $white;
+        }
+        .flag-icon {
+          height: 0.9em;
+        }
+    }
+    .language-select__dropdown-menu {
+      background: $white;
+      border: none;
+      min-width: auto;
+      .language-select__dropdown-item {
+        color: $dark;
+        &:hover {
+          background: lighten($color: $body-bg, $amount: 50%);
+          color: $white;
+        }
+      }
+    }
+  }
+}

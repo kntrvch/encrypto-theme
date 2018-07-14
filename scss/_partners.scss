@@ -1,0 +1,17 @@
+// Styling for the partners section
+
+#partners {
+  .owl-carousel .owl-item img {
+    height: 80px;
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); 
+    @include transition-all;
+    &:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); 
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// Styling for the preloader
+
+@keyframes spinner {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 
+#preloader {
+  background-color: $body-bg;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border-top: 5px solid $primary;
+    border-right: 5px solid transparent;
+    animation: spinner .6s linear infinite;
+  }
+}
