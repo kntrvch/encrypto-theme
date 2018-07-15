@@ -76,6 +76,12 @@ gulp.task('vendor', function() {
   ])
   .pipe(gulp.dest('./vendor/animate.css/'))
 
+  // Parallax.js
+  gulp.src([
+    './node_modules/jquery-parallax.js/*.js'
+  ])
+  .pipe(gulp.dest('./vendor/jquery-parallax.js/'))
+
   // Owl Carousel 2
   gulp.src([
     './node_modules/owl.carousel/dist/*.js', 
@@ -140,6 +146,24 @@ gulp.task('vendor', function() {
     './node_modules/raphael/raphael.min.js'
   ])
   .pipe(gulp.dest('./vendor/raphael.js/'))
+
+  // Peity
+  gulp.src([
+    './node_modules/peity/*.js'
+  ])
+  .pipe(gulp.dest('./vendor/peity/'))
+
+  // jQuery Marquee
+  gulp.src([
+    './node_modules/jquery.marquee/*.js'
+  ])
+  .pipe(gulp.dest('./vendor/jquery.marquee/'))
+
+    // Odometer
+    gulp.src([
+      './node_modules/odometer/*.js'
+    ])
+    .pipe(gulp.dest('./vendor/odometer/'))
   
 
 });

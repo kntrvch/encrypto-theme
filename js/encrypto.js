@@ -589,12 +589,12 @@
         Morris.Donut({
             element: 'distribution-chart',
             data: [
-            {label: "Download Sales", value: 12},
-            {label: "In-Store Sales", value: 30},
-            {label: "Mail-Order Sales", value: 20}
-            ], 
-            resize: true, 
-            colors: ['#ff6f00', '#6610f2', '#e83e8c', '#f0ad4e', '#5cb85c', '#5bc0de'], 
+                { label: "Download Sales", value: 12 },
+                { label: "In-Store Sales", value: 30 },
+                { label: "Mail-Order Sales", value: 20 }
+            ],
+            resize: true,
+            colors: ['#ff6f00', '#6610f2', '#e83e8c', '#f0ad4e', '#5cb85c', '#5bc0de'],
             formatter: function (y, data) { return y + '%' }
         });
     }
@@ -627,7 +627,7 @@ $(window).on('load', function () {
 // 01 Animation
 $(window).on('load', function () {
     if ($('#mobile').length > 0) {
-        var anim = new Vivus('mobile-svg', { duration: 100, type: 'sync', start: 'autostart', forceRender: false}, function () {
+        var anim = new Vivus('mobile-svg', { duration: 100, type: 'sync', start: 'autostart', forceRender: false }, function () {
             //$('#mobile-image').fadeIn('slow');
             $('#mobile-image').addClass('visible');
         });
@@ -637,8 +637,57 @@ $(window).on('load', function () {
 // 04 Animation
 $(window).on('load', function () {
     if ($('#trace').length > 0) {
-        var anim = new Vivus('trace-svg', { duration: 200, type: 'sync', start: 'autostart', forceRender: false}, function () {
+        var anim = new Vivus('trace-svg', { duration: 200, type: 'sync', start: 'autostart', forceRender: false }, function () {
         });
+    }
+});
+
+// Ticker
+$(window).on('load', function () {
+    if ($('#ticker').length > 0) {
+        $("#ticker .ticker__item__graph .line").peity("line", {
+            fill: 'none'
+        });
+
+        $('.ticker').marquee({
+            duration: 5000,
+            direction: 'left',
+            duplicated: true,
+            pauseOnHover: true,
+            speed: 150,
+            startVisible: true,
+            gap: 0
+        });
+    }
+});
+
+// Vector map animation
+$(window).on('load', function () {
+    if ($('#map-svg').length > 0) {
+        var trigger = new Waypoint({
+            element: document.getElementById('map-svg-lines'),
+            handler: function (direction) {
+                var a = document.getElementById("map-svg-lines");
+                var svgDoc = a.contentDocument;
+                var pathEls = svgDoc.querySelectorAll("path.line");
+                for (var i = 0; i < pathEls.length; i++) {
+                    var pathEl = pathEls[i];
+                    var offset = anime.setDashoffset(pathEl);
+                    pathEl.setAttribute('stroke-dashoffset', offset);
+                    anime({
+                        targets: pathEl,
+                        strokeDashoffset: [offset, 0],
+                        duration: anime.random(1000, 3000),
+                        delay: function (el, i) { return i * 250 },
+                        loop: false,
+                        direction: 'normal',
+                        easing: 'easeInOutSine',
+                        autoplay: true
+                    });
+                }
+            }, 
+            offset: '95%'
+        })
     }
 });
 

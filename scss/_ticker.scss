@@ -1,0 +1,48 @@
+// Styling for the ticker section
+#ticker {
+  &.ticker {
+    background-color: black;
+    height: 36px;
+    overflow: hidden;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    &--top {
+      top: 0;
+    }
+    &--bottom {
+      bottom: 0;
+    }
+    .ticker__item {
+      margin-right: 20px;
+      float: left;
+      & > span {
+        float: left;
+      }
+      .ticker__item__name, 
+      .ticker__item__value, 
+      .ticker__item__change {
+        line-height: 26px;
+        font-size: 13px;
+        padding: 0 5px;
+        font-weight: 300;
+      }
+      .ticker__item__name {
+        font-weight: 700;
+      }
+      .ticker__item__change {
+        &--plus {
+          color: #5cb85c;
+        }
+        &--minus {
+          color: #d9534f;
+        }
+      }
+      .ticker__item__graph {
+        padding: 5px;
+        display: inline-block;
+      }
+    }
+  }
+}

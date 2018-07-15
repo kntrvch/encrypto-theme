@@ -8491,6 +8491,10 @@ section .section-heading {
   background-color: #000 !important;
 }
 
+.bg-body {
+  background-color: #1a237e !important;
+}
+
 .corner-ribbon {
   width: 200px;
   background: #ff6f00;
@@ -8620,6 +8624,145 @@ section.skew .section__skew--bottom svg {
 #trace #trace-svg path {
   fill: blue !important;
   stroke: blue !important;
+}
+
+.payment-methods {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-methods li {
+  display: inline;
+}
+
+.payment-methods li + li {
+  padding-left: 10px;
+}
+
+.social-media-list {
+  clear: both;
+  padding-left: 0;
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.social-media-list li {
+  float: left;
+}
+
+.social-media-list li + li {
+  margin-left: 10px;
+}
+
+.btn-social {
+  width: 40px;
+  height: 40px;
+  min-width: 0;
+  padding: 10px 13px;
+  text-align: center;
+  background: none;
+  color: #ff6f00;
+  border-radius: 50%;
+  border: none;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.btn-social::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: inset 0 0 0 35px #fff;
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+  transform: scale3d(0.9, 0.9, 1);
+  -webkit-transition: box-shadow 0.3s, -webkit-transform 0.3;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.btn-social .icon {
+  font-size: 14px;
+  width: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: inherit;
+  position: relative;
+  display: inline-block;
+  transform: translate(0, 0);
+  vertical-align: middle;
+}
+
+.btn-social:hover {
+  color: #fff;
+}
+
+.btn-social:hover::before {
+  box-shadow: inset 0 0 0 2px #fff;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+/*
+* === Ticker ===
+*/
+#ticker.ticker {
+  background-color: black;
+  height: 36px;
+  overflow: hidden;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#ticker.ticker--top {
+  top: 0;
+}
+
+#ticker.ticker--bottom {
+  bottom: 0;
+}
+
+#ticker.ticker .ticker__item {
+  margin-right: 20px;
+  float: left;
+}
+
+#ticker.ticker .ticker__item > span {
+  float: left;
+}
+
+#ticker.ticker .ticker__item .ticker__item__name,
+#ticker.ticker .ticker__item .ticker__item__value,
+#ticker.ticker .ticker__item .ticker__item__change {
+  line-height: 26px;
+  font-size: 13px;
+  padding: 0 5px;
+  font-weight: 300;
+}
+
+#ticker.ticker .ticker__item .ticker__item__name {
+  font-weight: 700;
+}
+
+#ticker.ticker .ticker__item .ticker__item__change--plus {
+  color: #5cb85c;
+}
+
+#ticker.ticker .ticker__item .ticker__item__change--minus {
+  color: #d9534f;
+}
+
+#ticker.ticker .ticker__item .ticker__item__graph {
+  padding: 5px;
+  display: inline-block;
 }
 
 /*
@@ -8792,6 +8935,10 @@ section.skew .section__skew--bottom svg {
   color: #fff;
 }
 
+#ticker.ticker--top + #mainNav {
+  margin-top: 36px;
+}
+
 /*
 * === Header section ===
 */
@@ -8937,14 +9084,19 @@ header.intro #mobile-image.visible {
 /*
 * === Sale section ===
 */
+#sale {
+  background-color: rgba(26, 35, 126, 0.7);
+}
+
 #sale .countdown .countdown__time .countdown__time__number {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Coda Caption", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   word-wrap: normal;
 }
 
 #sale .countdown .countdown__time .countdown__time__number-separator {
-  font-size: 2.5rem;
+  color: #e6e6e6;
+  font-size: 3rem;
   font-family: "Coda Caption", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   position: absolute;
   right: -5px;
@@ -8953,6 +9105,16 @@ header.intro #mobile-image.visible {
 
 #sale .countdown .countdown__time .countdown__time__label {
   text-transform: uppercase;
+}
+
+#sale .progress {
+  background-color: #000;
+  overflow: visible;
+}
+
+#sale .progress .progress-bar {
+  -webkit-box-shadow: 0px 0px 10px 3px #fff;
+  box-shadow: 0px 0px 10px 3px #fff;
 }
 
 @media (max-width: 768px) {
