@@ -1,5 +1,6 @@
 // Styling for the header
 header.intro {
+  overflow: hidden;
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   @include background-cover;
@@ -35,6 +36,9 @@ header.intro {
   @media (min-width: 1200px) {
     h1 {
       font-size: 4rem;
+      &.page-header {
+
+      }
     }
   }
   .gradient-bg {
@@ -52,11 +56,13 @@ header.intro {
   }
   #mobile-image {
     opacity: 0;
-    width: 361px;
+    width: 363px;
     position: absolute;
-    top: 150px;
+    top: 149px;
     right: 250px;
     z-index: 1000;
+    border-radius: 40px;
+    box-shadow: 20px 20px 38px 10px rgba(0,0,0,.2), 10px 15px 22px 10px rgba(0,0,0,.3);
     @include transition-all;
     filter: brightness(3);
     &.visible {

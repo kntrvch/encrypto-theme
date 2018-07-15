@@ -497,24 +497,6 @@
         new WOW().init();
     }
 
-    // 02 animation
-    var pathEls = document.querySelectorAll('.section__bg--anim path');
-    for (var i = 0; i < pathEls.length; i++) {
-        var pathEl = pathEls[i];
-        var offset = anime.setDashoffset(pathEl);
-        pathEl.setAttribute('stroke-dashoffset', offset);
-        anime({
-            targets: pathEl,
-            strokeDashoffset: [offset, 0],
-            duration: anime.random(1000, 3000),
-            delay: anime.random(500, 2000),
-            loop: true,
-            direction: 'alternate',
-            easing: 'easeInOutSine',
-            autoplay: true
-        });
-    }
-
     // Gradient background
     var colors = new Array(
         [63, 81, 181],
@@ -576,7 +558,7 @@
     setInterval(updateGradient, 10);
 
     // 03 Animation
-    var anim = new Vivus('traces', { type: 'delayed', duration: 200, start: 'autostart', forceRender: false }, function () {});
+    //var anim = new Vivus('traces', { type: 'delayed', duration: 200, start: 'autostart', forceRender: false }, function () {});
 
     // ICO countdown
     if ($('.countdown').length > 0) {
@@ -602,13 +584,44 @@
 
     }
 
+    // Donut chart
+    if ($('#distribution-chart').length > 0) {
+        Morris.Donut({
+            element: 'distribution-chart',
+            data: [
+            {label: "Download Sales", value: 12},
+            {label: "In-Store Sales", value: 30},
+            {label: "Mail-Order Sales", value: 20}
+            ], 
+            resize: true, 
+            colors: ['#ff6f00', '#6610f2', '#e83e8c', '#f0ad4e', '#5cb85c', '#5bc0de'], 
+            formatter: function (y, data) { return y + '%' }
+        });
+    }
+
+    // Sign-in popup animation
+    if ($('#signin-modal').length > 0) {
+        $('#signin-modal').on('show.bs.modal', function (e) {
+            $('#signin-modal .modal-dialog').attr('class', 'modal-dialog modal-dialog-centered animated zoomIn');
+        })
+        $('#signin-modal').on('hide.bs.modal', function (e) {
+            $('#signin-modal .modal-dialog').attr('class', 'modal-dialog modal-dialog-centered animated zoomOut');
+        })
+    }
+
 })(jQuery);
 
 
 // Preloader
 $(window).on('load', function () {
     $('#preloader').fadeOut('slow');
-    $('.intro .animated').addClass('fadeIn');
+});
+
+// Page header animation
+$(window).on('load', function () {
+    if ($('.page-header.animated').length > 0) {
+        $('.page-header.animated').addClass('fadeIn');
+    }
 });
 
 // 01 Animation
@@ -617,6 +630,14 @@ $(window).on('load', function () {
         var anim = new Vivus('mobile-svg', { duration: 100, type: 'sync', start: 'autostart', forceRender: false}, function () {
             //$('#mobile-image').fadeIn('slow');
             $('#mobile-image').addClass('visible');
+        });
+    }
+});
+
+// 04 Animation
+$(window).on('load', function () {
+    if ($('#trace').length > 0) {
+        var anim = new Vivus('trace-svg', { duration: 200, type: 'sync', start: 'autostart', forceRender: false}, function () {
         });
     }
 });

@@ -127,6 +127,21 @@ gulp.task('vendor', function() {
   ])
   .pipe(gulp.dest('./vendor/vivus/'))
 
+  // Morris.js
+  gulp.src([
+    './node_modules/morris.js/morris.js', 
+    './node_modules/morris.js/morris.min.js'
+  ])
+  .pipe(gulp.dest('./vendor/morris.js/'))
+
+  // Raphael.js
+  gulp.src([
+    './node_modules/raphael/raphael.js', 
+    './node_modules/raphael/raphael.min.js'
+  ])
+  .pipe(gulp.dest('./vendor/raphael.js/'))
+  
+
 });
 
 // Compile SCSS

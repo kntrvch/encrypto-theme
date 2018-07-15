@@ -30,7 +30,9 @@
     "jquery.counterup": "^2.1.0",
     "jquery.easing": "^1.4.1",
     "modernizr": "^3.6.0",
+    "morris.js": "^0.5.0",
     "owl.carousel": "^2.3.4",
+    "raphael": "^2.2.7",
     "typed.js": "^2.0.8",
     "vivus": "^0.4.4",
     "wowjs": "^1.1.3"

@@ -129,7 +129,7 @@ label,
   background-color: transparent;
   border-color: $white;
   color: $gray-100;
-  font-weight: 400;
+  font-weight: 300;
   &:focus {
     background-color: transparent;
     color: $gray-100;
@@ -137,8 +137,40 @@ label,
   &::placeholder { 
     color: $gray-100;
     font-weight: 300;
-    opacity: .5; 
+    opacity: .3; 
   }
+}
+
+// Modal =======================================================================
+
+.modal-content {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-color: $primary;
+}
+
+.modal.fade{
+  opacity:1;
+  .modal-dialog {
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    transform: translate(0);
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+    .close {
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      color: #fff;
+      font-size: 2rem;
+    }
+ }
+ &.show {
+  .modal-dialog {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+  }
+ }
 }
 
 // Navs ========================================================================
@@ -148,10 +180,29 @@ label,
   .nav-link,
   .nav-link:hover {
     color: $body-color;
+    border-color: $primary;
   }
 
   .nav-link.disabled {
     color: $nav-link-disabled-color;
+  }
+}
+
+.nav-tabs {
+  border-bottom: none;
+  .nav-item {
+    margin-top: -1px;
+  }
+  .nav-link {
+    color: #ebebeb;
+    background-color: rgba($color: $gray-100, $alpha: 0.1);
+    font-size: 1.2rem;
+    
+  }
+  .nav-link.active {
+    color: $white;
+    background-color: transparent;
+    border-color: transparent;
   }
 }
 
