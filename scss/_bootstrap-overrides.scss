@@ -249,6 +249,17 @@ label,
 
 // Progress bars ===============================================================
 
+.progress {
+  background-color: #000;
+  overflow: visible;
+  .progress-bar {
+    -webkit-box-shadow: 0px 0px 10px 3px #fff; 
+    box-shadow: 0px 0px 10px 3px #fff;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
 // Containers ==================================================================
 
 .modal {

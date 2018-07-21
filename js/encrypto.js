@@ -584,7 +584,23 @@
 
     }
 
-    // Donut chart
+    // Progress bar animation
+    if ($('.progress').length > 0) {
+        $('.progress').each(function (i, elem) {
+            var progressBar = $(elem).find('.progress-bar');
+            var progress = new Waypoint({
+                element: $(elem).get(0),
+                handler: function (direction) {
+                    progressBar.animate({
+                        width: progressBar.attr('data-progress') + "%"
+                    }, 2000);
+                },
+                offset: '99%'
+            });
+        });
+    }
+
+    // Donut chart #1
     if ($('#distribution-chart').length > 0) {
         Morris.Donut({
             element: 'distribution-chart',
@@ -597,6 +613,28 @@
             colors: ['#ff6f00', '#6610f2', '#e83e8c', '#f0ad4e', '#5cb85c', '#5bc0de'],
             formatter: function (y, data) { return y + '%' }
         });
+    }
+
+    // Line chart #1
+    if ($('#trending-chart').length > 0) {
+        Morris.Line({
+            element: 'trending-chart',
+            data: [
+              { y: '2012', a: 0, b: 0 },
+              { y: '2013', a: 10,  b: 0 },
+              { y: '2014', a: 25,  b: 10 },
+              { y: '2015', a: 50,  b: 15 },
+              { y: '2016', a: 80,  b: 40 },
+              { y: '2017', a: 95,  b: 65 },
+              { y: '2018', a: 100, b: 75 }
+            ],
+            xkey: 'y',
+            ykeys: ['a', 'b'],
+            labels: ['Encrypto', 'Average'], 
+            hideHover: "auto", 
+            smooth: false, 
+            lineColors: ['#ff6f00','#1a237e']
+          });
     }
 
     // Sign-in popup animation
@@ -685,7 +723,7 @@ $(window).on('load', function () {
                         autoplay: true
                     });
                 }
-            }, 
+            },
             offset: '95%'
         })
     }

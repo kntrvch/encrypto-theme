@@ -157,14 +157,7 @@ gulp.task('vendor', function() {
   gulp.src([
     './node_modules/jquery.marquee/*.js'
   ])
-  .pipe(gulp.dest('./vendor/jquery.marquee/'))
-
-    // Odometer
-    gulp.src([
-      './node_modules/odometer/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/odometer/'))
-  
+  .pipe(gulp.dest('./vendor/jquery.marquee/'))  
 
 });
 

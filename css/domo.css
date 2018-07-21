@@ -8610,6 +8610,32 @@ section.skew .section__skew--bottom svg {
   stroke: black !important;
 }
 
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+
+.morris-hover.morris-default-style {
+  border-radius: 10px;
+  padding: 6px;
+  color: #666;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 2px rgba(230, 230, 230, 0.8);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space: nowrap;
+  margin: 0.1em 0;
+}
+
 .modal-open,
 .modal-open .modal {
   overflow: initial;
@@ -9105,16 +9131,6 @@ header.intro #mobile-image.visible {
 
 #sale .countdown .countdown__time .countdown__time__label {
   text-transform: uppercase;
-}
-
-#sale .progress {
-  background-color: #000;
-  overflow: visible;
-}
-
-#sale .progress .progress-bar {
-  -webkit-box-shadow: 0px 0px 10px 3px #fff;
-  box-shadow: 0px 0px 10px 3px #fff;
 }
 
 @media (max-width: 768px) {
@@ -9846,6 +9862,18 @@ label,
 
 .close:hover, .close:focus {
   opacity: 1;
+}
+
+.progress {
+  background-color: #000;
+  overflow: visible;
+}
+
+.progress .progress-bar {
+  -webkit-box-shadow: 0px 0px 10px 3px #fff;
+  box-shadow: 0px 0px 10px 3px #fff;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .modal-header, .modal-footer {
