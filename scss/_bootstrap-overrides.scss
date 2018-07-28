@@ -46,6 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 .table {
   font-size: $font-size-sm;
 
+  thead th {
+    color: $primary;
+    border-top: none;
+  }
+
   .thead-dark th {
     color: $white;
   }

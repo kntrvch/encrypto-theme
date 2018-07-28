@@ -1,0 +1,40 @@
+// Styling for the testimonials section
+
+#testimonials {
+  .item {
+      img {
+        margin: 0 auto;
+        width: 60px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+      }
+      small {
+        font-weight: 700;
+      }
+  }
+  
+  .owl-dots  {
+    text-align: center;
+    .owl-dot {
+      
+      span {
+        background: rgba(255, 255, 255, .5);
+        width: 10px;
+        height: 10px;
+        margin: 5px 7px;
+        display: block;
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+      }
+      &.active, 
+      &:hover {
+        span {
+          background: rgba(255, 255, 255, .9);
+        }
+      }
+    }
+  }
+}
+

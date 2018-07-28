@@ -268,3 +268,32 @@ section.skew {
     }
   }
 }
+
+.cryptocurrency-table {
+  td, 
+  th {
+    padding: 1rem;
+  }
+  .cryptocurrency-table__change {
+    &::before {
+      font-family: 'fontawesome';
+      margin-right: 5px;
+    }
+    &--plus {
+      color: #5cb85c;
+      &::before {
+        content: "\f0d8";
+      }
+    }
+    &--minus {
+      color: #d9534f;
+      &::before {
+        content: "\f0d7";
+      }
+    }
+  }
+  
+  polygon {
+    fill: url(#chart-gradient);
+  }
+}

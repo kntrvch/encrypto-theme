@@ -633,7 +633,8 @@
             labels: ['Encrypto', 'Average'], 
             hideHover: "auto", 
             smooth: false, 
-            lineColors: ['#ff6f00','#1a237e']
+            lineColors: ['#ff6f00','#1a237e'],
+            resize: true
           });
     }
 
@@ -668,6 +669,7 @@ $(window).on('load', function () {
         var anim = new Vivus('mobile-svg', { duration: 100, type: 'sync', start: 'autostart', forceRender: false }, function () {
             //$('#mobile-image').fadeIn('slow');
             $('#mobile-image').addClass('visible');
+            $('#mobile-svg').fadeOut();
         });
     }
 });
@@ -695,6 +697,15 @@ $(window).on('load', function () {
             speed: 150,
             startVisible: true,
             gap: 0
+        });
+    }
+});
+
+// Cryptocurrency table
+$(window).on('load', function () {
+    if ($('.cryptocurrency-table').length > 0) {
+        $(".cryptocurrency-table .cryptocurrency-table__chart--line").peity("line", {
+            stroke: "#ff6f00",
         });
     }
 });
