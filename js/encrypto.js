@@ -3,7 +3,7 @@
 
     document.body.className = document.body.className.replace("no-js", "js");
 
-    jQuery.scrollSpeed(100, 800, 'easeOutCubic');
+    //jQuery.scrollSpeed(100, 800, 'easeOutCubic');
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
@@ -673,12 +673,12 @@ $(window).on('load', function () {
 });
 
 // 04 Animation
-$(window).on('load', function () {
-    if ($('#trace').length > 0) {
-        var anim = new Vivus('trace-svg', { duration: 200, type: 'sync', start: 'autostart', forceRender: false }, function () {
-        });
-    }
-});
+// $(window).on('load', function () {
+//     if ($('#trace').length > 0) {
+//         var anim = new Vivus('trace-svg', { duration: 200, type: 'sync', start: 'autostart', forceRender: false }, function () {
+//         });
+//     }
+// });
 
 // Ticker
 $(window).on('load', function () {

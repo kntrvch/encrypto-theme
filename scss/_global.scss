@@ -232,6 +232,7 @@ section.skew {
   z-index: 1;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  text-decoration: none;
   &::before {
     content: '';
     position: absolute;
