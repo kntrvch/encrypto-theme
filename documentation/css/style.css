@@ -89,7 +89,7 @@ section {
 }
 
 article {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 section + section {
@@ -141,4 +141,36 @@ pre .support.close {
 
 #section-nav ul li ul li a.active {
   font-weight: 700;
+}
+
+h5 {
+  display: inline-block;
+}
+
+.skew-demo {
+  margin-left: 20px;
+  height: 15px;
+  width: 40px;
+  display: inline-block;
+  background: #ff6f00;
+}
+
+.skew-demo--left {
+  transform: rotate(16deg) scale(1) skew(16deg) translate(0px);
+  -webkit-transform: rotate(16deg) scale(1) skew(16deg) translate(0px);
+  -moz-transform: rotate(16deg) scale(1) skew(16deg) translate(0px);
+  -o-transform: rotate(16deg) scale(1) skew(16deg) translate(0px);
+  -ms-transform: rotate(16deg) scale(1) skew(16deg) translate(0px);
+}
+
+.skew-demo--right {
+  transform: rotate(164deg) scale(1) skew(-16deg) translate(0px);
+  -webkit-transform: rotate(164deg) scale(1) skew(-16deg) translate(0px);
+  -moz-transform: rotate(164deg) scale(1) skew(-16deg) translate(0px);
+  -o-transform: rotate(164deg) scale(1) skew(-16deg) translate(0px);
+  -ms-transform: rotate(164deg) scale(1) skew(-16deg) translate(0px);
+}
+
+.copy-button {
+  cursor: pointer;
 }

@@ -53,13 +53,14 @@
                       Header
                     </a>
                   </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#sections">
+                        Sections
+                      </a>
+                    </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Customers
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   Reports
@@ -132,6 +133,7 @@
               <p>
                 Included with this theme are the following:
               </p>
+              <br>
               <pre>
           <code data-language="html">
           encrypto/
@@ -163,7 +165,12 @@
             </article>
             <article>
               <h3>Basic HTML structure</h3>
-              <pre>
+              <a class="copy-button float-right" data-clipboard-target="#code-1">
+                  Copy <i class="fa fa-copy"></i> 
+              </a>
+              <br>
+              <br>
+              <pre id="code-1">
 <code data-language="html">
 &lt;body id="page-top" class="no-js home"&gt;
 
@@ -196,11 +203,138 @@
 
             <article id="menu">
               <h3>Menu</h3>
+              <p>To edit the main menu, you have to look for the <code>&lt;ul class="navbar-nav ml-auto mr-3"&gt;...&lt;/ul&gt;</code> element</p>
+              <a class="copy-button float-right" data-clipboard-target="#code-2">
+                  Copy <i class="fa fa-copy"></i> 
+              </a>
+              <br>
+              <br>
+                <pre id="code-2"><code data-language="html">&lt;ul class="navbar-nav ml-auto mr-3"&gt;...&lt;/ul&gt;</code></pre>
+              
+              <ul class="list-unstyled">
+                <li>- Each menu item links to a section (see section Sections below) in the main content.</li>
+                <li>- Each menu item should follow this format:</li>
+              </ul>
+              
+<a class="copy-button float-right" data-clipboard-target="#code-3">
+    Copy <i class="fa fa-copy"></i> 
+</a>
+<br>
+<br>
+<pre id="code-3"><code data-language="html">&lt;li class="nav-item"&gt;
+  &lt;a class="nav-link" href="#contact"&gt;Contact&lt;/a&gt;
+&lt;/li&gt;</code></pre>
             </article>
 
             <article id="header">
               <h3>Header</h3>
             </article>
+
+            <article id="sections">
+                <h3>Sections</h3>
+                  
+                  <p>The theme includes three types of sections:</p>
+                  <ul class="list-unstyled">
+                      <li>- normal</li>
+                      <li>- left-skewed</li>
+                      <li>- right-skewed</li>
+                    </ul>
+<br>
+<br>
+                    <h5>Normal section</h5>
+                    <div class="skew-demo skew-demo--normal"></div>
+                    <br>
+<a class="copy-button float-right" data-clipboard-target="#code-4">
+    Copy <i class="fa fa-copy"></i> 
+</a>
+<br>
+<br>
+                    
+<pre id="code-4"><code data-language="html">&lt;section&gt;
+  &lt;!--section content--&gt;  
+   ...
+  &lt;!--/section content--&gt;    
+&lt;/section&gt;</code></pre>
+<br>
+<br>
+<h5>Left-skewed section</h5>
+<div class="skew-demo skew-demo--left"></div>
+<br>
+<a class="copy-button float-right" data-clipboard-target="#code-5">
+    Copy <i class="fa fa-copy"></i> 
+</a>
+<br>
+<br>
+<pre id="code-5"><code data-language="html">&lt;section class="skew skew--left"&gt;
+  &lt;div class="section__skew--top"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"&gt;
+      &lt;polygon points="0,100 0,0 100,100" /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;!--section content--&gt;  
+  ...
+  &lt;!--/section content--&gt;  
+  &lt;div class="section__skew--bottom"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"&gt;
+      &lt;polygon points="0,0 100,0 100,100" /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<br>
+<br>
+<h5>Right-skewed section</h5>
+<div class="skew-demo skew-demo--right"></div>
+
+<br>
+<a class="copy-button float-right" data-clipboard-target="#code-6">
+    Copy <i class="fa fa-copy"></i> 
+</a>
+<br>
+<br>
+
+<pre id="code-6"><code data-language="html">&lt;section class="skew skew--right"&gt;
+  &lt;div class="section__skew--top"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"&gt;
+      &lt;polygon points="0,100 100,0 100,100" /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;!--section content--&gt;  
+  ...
+  &lt;!--/section content--&gt;  
+  &lt;div class="section__skew--bottom"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"&gt;
+      &lt;polygon points="0,0 100,0 0,100" /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<br>
+<p><b>When applying custom background color to skewed section, remember to set proper <code>fill</code> attribute for both SVG elements:</b></p>
+<a class="copy-button float-right" data-clipboard-target="#code-7">
+    Copy <i class="fa fa-copy"></i> 
+</a>
+<br>
+<br>
+
+<pre id="code-7"><code data-language="css">
+section.skew#contact .section__skew--top svg, 
+section.skew#contact .section__skew--bottom svg {
+  fill: black;
+}
+</code></pre>
+<br>
+<h5>Parallax effect</h5>
+<p><i class="fa fa-share"></i><b>EN</b>CRYPTO template comes with <b>Parallax.js</b> plugin which creates an element of depth and distance giving your website three-dimension feel.</p>
+<p>You can set the parallax effect to all unskewed sections. If you need further info on plugin configuration, please visit <a href="http://pixelcog.github.io/parallax.js/">Parallax.js website</a></p> 
+  <a class="copy-button float-right" data-clipboard-target="#code-8">
+      Copy <i class="fa fa-copy"></i> 
+  </a>
+  <br>
+  <br>
+<pre id="code-8"><code data-language="html">&lt;section class="parallax-window" id="sale" data-parallax="scroll" data-image-src="img/bg-sale.jpg"&gt;
+</code></pre>
+</section>
+
+</article>
 
 
           </section>
@@ -209,7 +343,7 @@
             <p>
               List of plugins used in the template:
             </p>
-            <ul>
+            <ul class="list-unstyled">
               <li>Font Awesome (
                 <a href="https://fontawesome.com/">https://fontawesome.com/</a>)</li>
               <li>flag-icon-css (
@@ -286,11 +420,15 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/rainbow/rainbow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
     <script>
       $(function () {
         $('body').scrollspy({
           target: '#section-nav'
         });
+
+        var clipboard = new ClipboardJS('.copy-button');
+
       });
     </script>
   </body>
