@@ -53,7 +53,7 @@
     // Initialize map
     if ($('#map').length > 0) {
 
-        // Special thanks to Dylan Vann (https://dylanvann.com/custom-animated-google-maps-markers/)
+        // by Dylan Vann (https://dylanvann.com/custom-animated-google-maps-markers/)
 
         CustomMarker.prototype = new google.maps.OverlayView();
 
@@ -85,117 +85,6 @@
                 div.style.left = point.x + 'px';
                 div.style.top = point.y + 'px';
             }
-        };
-
-        CustomMarker.prototype.animateDrop = function () {
-            dynamics.stop(this.pinWrap);
-            dynamics.css(this.pinWrap, {
-                'transform': 'scaleY(2) translateY(-' + $('#map').outerHeight() + 'px)',
-                'opacity': '1',
-            });
-            dynamics.animate(this.pinWrap, {
-                translateY: 0,
-                scaleY: 1.0,
-            }, {
-                    type: dynamics.gravity,
-                    duration: 1800,
-                });
-
-            dynamics.stop(this.pin);
-            dynamics.css(this.pin, {
-                'transform': 'none',
-            });
-            dynamics.animate(this.pin, {
-                scaleY: 0.8
-            }, {
-                    type: dynamics.bounce,
-                    duration: 1800,
-                    bounciness: 600,
-                })
-
-            dynamics.stop(this.pinShadow);
-            dynamics.css(this.pinShadow, {
-                'transform': 'scale(0,0)',
-            });
-            dynamics.animate(this.pinShadow, {
-                scale: 1,
-            }, {
-                    type: dynamics.gravity,
-                    duration: 1800,
-                });
-        };
-
-        CustomMarker.prototype.animateBounce = function () {
-            dynamics.stop(this.pinWrap);
-            dynamics.css(this.pinWrap, {
-                'transform': 'none',
-            });
-            dynamics.animate(this.pinWrap, {
-                translateY: -30
-            }, {
-                    type: dynamics.forceWithGravity,
-                    bounciness: 0,
-                    duration: 500,
-                    delay: 150,
-                });
-
-            dynamics.stop(this.pin);
-            dynamics.css(this.pin, {
-                'transform': 'none',
-            });
-            dynamics.animate(this.pin, {
-                scaleY: 0.8
-            }, {
-                    type: dynamics.bounce,
-                    duration: 800,
-                    bounciness: 0,
-                });
-            dynamics.animate(this.pin, {
-                scaleY: 0.8
-            }, {
-                    type: dynamics.bounce,
-                    duration: 800,
-                    bounciness: 600,
-                    delay: 650,
-                });
-
-            dynamics.stop(this.pinShadow);
-            dynamics.css(this.pinShadow, {
-                'transform': 'none',
-            });
-            dynamics.animate(this.pinShadow, {
-                scale: 0.6,
-            }, {
-                    type: dynamics.forceWithGravity,
-                    bounciness: 0,
-                    duration: 500,
-                    delay: 150,
-                });
-        };
-
-        CustomMarker.prototype.animateWobble = function () {
-            dynamics.stop(this.pinWrap);
-            dynamics.css(this.pinWrap, {
-                'transform': 'none',
-            });
-            dynamics.animate(this.pinWrap, {
-                rotateZ: -45,
-            }, {
-                    type: dynamics.bounce,
-                    duration: 1800,
-                });
-
-            dynamics.stop(this.pin);
-            dynamics.css(this.pin, {
-                'transform': 'none',
-            });
-            dynamics.animate(this.pin, {
-                scaleX: 0.8
-            }, {
-                    type: dynamics.bounce,
-                    duration: 800,
-                    bounciness: 1800,
-                });
         };
 
         var myLatlng = new google.maps.LatLng(40.7420371, -73.9875635);
@@ -379,21 +268,6 @@
             map: map,
         });
 
-        google.maps.event.addListener(marker, 'click', function (e) {
-            marker.animateWobble();
-        });
-
-        $('#drop').on('click', function (e) {
-            marker.animateDrop();
-        });
-
-        $('#wobble').on('click', function (e) {
-            marker.animateWobble();
-        });
-
-        $('#bounce').on('click', function (e) {
-            marker.animateBounce();
-        });
     }
 
     $("#scrollToTop").click(function (e) {
@@ -562,10 +436,9 @@
 
     // ICO countdown
     if ($('.countdown').length > 0) {
-        var now = $(".countdown").attr('data-start');
         var deadline = $(".countdown").attr('data-end');
 
-        var timespan = countdown(new Date(now), new Date(deadline), countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
+        var timespan = countdown(Date.now(), new Date(deadline), countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
         var timer = countdown(function (timespan) {
             if (timespan != null && timespan != undefined && timespan.value > 0) {
                 $(".countdown__time__number--days").text(addLeadingZero(timespan.days));
@@ -620,22 +493,22 @@
         Morris.Line({
             element: 'trending-chart',
             data: [
-              { y: '2012', a: 0, b: 0 },
-              { y: '2013', a: 10,  b: 0 },
-              { y: '2014', a: 25,  b: 10 },
-              { y: '2015', a: 50,  b: 15 },
-              { y: '2016', a: 80,  b: 40 },
-              { y: '2017', a: 95,  b: 65 },
-              { y: '2018', a: 100, b: 75 }
+                { y: '2012', a: 0, b: 0 },
+                { y: '2013', a: 10, b: 0 },
+                { y: '2014', a: 25, b: 10 },
+                { y: '2015', a: 50, b: 15 },
+                { y: '2016', a: 80, b: 40 },
+                { y: '2017', a: 95, b: 65 },
+                { y: '2018', a: 100, b: 75 }
             ],
             xkey: 'y',
             ykeys: ['a', 'b'],
-            labels: ['Encrypto', 'Average'], 
-            hideHover: "auto", 
-            smooth: false, 
-            lineColors: ['#ff6f00','#1a237e'],
+            labels: ['Encrypto', 'Average'],
+            hideHover: "auto",
+            smooth: false,
+            lineColors: ['#ff6f00', '#1a237e'],
             resize: true
-          });
+        });
     }
 
     // Sign-in popup animation
@@ -748,6 +621,63 @@ $(window).on('scroll', function () {
         $("#scrollToTop").fadeOut('slow');
     }
 });
+
+// FSS background
+if ($('#background-container').length > 0) {
+    var config = {};
+
+
+    $(function () {
+
+        var $body = $(document.body),
+            $window = $(window);
+
+        var canvas = document.createElement('canvas');
+
+        backgroundEnabled = canvas.getContext && canvas.getContext('2d') && $('#background-container').css('display') != 'none';
+
+        if (backgroundEnabled) {
+            config.background = {
+                enabled: true,
+
+                RENDER: {
+                    renderer: 'canvas'
+                },
+
+                MESH: {
+                    ambient: '#555555', // Default 
+                    diffuse: '#ffffff', // Default
+                    width: 1.2, // Triangle Width
+                    height: 1.2, // Triangle Height
+                    depth: 10, // Transparency of the triangles
+                    segments: 16, // Number of triangles to display in 1 row
+                    slices: 8, // Number of triangles to display in 1 column
+                    xRange: 0.8, // Wideness of the triangles in X Position
+                    yRange: 0.1, // Wideness of the triangles in Y Position
+                    speed: 0.001 
+                },
+
+                LIGHT: {
+                    autopilot: true, 
+                    ambient: '#0d47a1',
+                    diffuse: '#1565c0',
+                    count: 1,
+                    zOffset: 100,
+
+                    speed: 0.001,
+                    gravity: 1200,
+                    dampening: 0.15,
+                    minLimit: 8,
+                    minDistance: 20,
+                    maxDistance: 400
+                }
+            }
+
+            initBackground();
+        }
+    });
+}
+
 
 function CustomMarker(opts) {
     this.setValues(opts);

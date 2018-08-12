@@ -22,7 +22,7 @@
   <link href="vendor/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/encrypto.min.css" rel="stylesheet">
+  <link href="css/encrypto-light.min.css" rel="stylesheet">
 
   <!-- Custom styling -->
   <!--<link href="css/custom.css" rel="stylesheet">-->
@@ -101,7 +101,7 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="#">
       <i class="fa fa-share"></i>
       <b>EN</b>CRYPTO</a>
@@ -148,7 +148,14 @@
   <!-- Header -->
   <!--header-->
   <header class="intro d-flex">
-    <div class="gradient-bg" id="gradient"></div>
+    
+    <!--.fss-container-->
+    <div id="background-container" class="background-container">
+      <div id="background-output" class="background-output"></div>
+  </div>
+
+    <!--/.fss-container-->
+
     <!--.container-->
     <div class="container my-auto">
       <!--.row-->
@@ -202,12 +209,12 @@
     <div class="d-none d-md-block" id="mobile">
       <object id="mobile-svg" type="image/svg+xml" data="img/mobile-svg.svg"></object>
     </div>
-    <img src="img/mobile-image_b.png" class="d-none d-md-block" id="mobile-image" alt="">
+    <img src="img/mobile-image_w.png" class="d-none d-md-block" id="mobile-image" alt="">
   </header>
   <!--/header-->
 
   <!--section-->
-  <section class="bg-dark skew skew--right">
+  <section class="bg-light skew skew--right">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 100,0 100,100" />
@@ -255,11 +262,11 @@
         <div class="col-lg-3 col-md-6 text-center">
           <!--.stats-box-->
           <div class="stats-box mx-auto mb-3 mb-lg-0">
-            <i class="stats-box__icon fa fa-4x fa-users text-white mb-3"></i>
+            <i class="stats-box__icon fa fa-4x fa-users mb-3"></i>
             <h3 class="stats-box__header mb-3">
               <span class="counter" data-counterup-time="1500" data-counterup-delay="30">16,500</span>
             </h3>
-            <p class="text-white mb-0">users monthly</p>
+            <p class="mb-0">users monthly</p>
           </div>
           <!--/.stats-box-->
         </div>
@@ -268,11 +275,11 @@
         <div class="col-lg-3 col-md-6 text-center">
           <!--.stats-box-->
           <div class="stats-box mx-auto mb-3 mb-lg-0">
-            <i class="stats-box__icon fa fa-4x fa-money text-white mb-3"></i>
+            <i class="stats-box__icon fa fa-4x fa-money mb-3"></i>
             <h3 class="stats-box__header mb-3">$
               <span class="counter" data-counterup-time="1500" data-counterup-delay="30">1,350,120</span>
             </h3>
-            <p class="text-white mb-0">total payout</p>
+            <p class="mb-0">total payout</p>
           </div>
           <!--/.stats-box-->
         </div>
@@ -281,11 +288,11 @@
         <div class="col-lg-3 col-md-6 text-center">
           <!--.stats-box-->
           <div class="stats-box mx-auto mb-3 mb-lg-0">
-            <i class="stats-box__icon fa fa-4x fa-globe text-white mb-3"></i>
+            <i class="stats-box__icon fa fa-4x fa-globe mb-3"></i>
             <h3 class="stats-box__header mb-3">
               <span class="counter pulse" data-counterup-time="1500" data-counterup-delay="30">120</span>
             </h3>
-            <p class="text-white mb-0">countries</p>
+            <p class="mb-0">countries</p>
           </div>
           <!--/.stats-box-->
         </div>
@@ -294,11 +301,11 @@
         <div class="col-lg-3 col-md-6 text-center">
           <!--.stats-box-->
           <div class="stats-box mx-auto mb-3 mb-lg-0">
-            <i class="stats-box__icon fa fa-4x fa-server text-white mb-3"></i>
+            <i class="stats-box__icon fa fa-4x fa-server mb-3"></i>
             <h3 class="stats-box__header mb-3">
               <span class="counter" data-counterup-time="1500" data-counterup-delay="30">15,000,000</span>
             </h3>
-            <p class="text-white mb-0">API requests monthly</p>
+            <p class="mb-0">API requests monthly</p>
           </div>
           <!--/.stats-box-->
         </div>
@@ -323,10 +330,10 @@
       <div class="row">
         <!--.col-*-->
         <div class="col-12 col-sm-12 col-md-12 col-xl-5 mr-auto pt-5 pb-5">
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
@@ -339,33 +346,33 @@
             <div class="row">
               <div class="col-6 col-md-3">
                 <div class="countdown__time countdown__time--first">
-                  <span class="countdown__time__number countdown__time__number--days">00</span>
-                  <span class="countdown__time__number-separator">:</span>
+                  <span class="countdown__time__number countdown__time__number--days text-white">00</span>
+                  <span class="countdown__time__number-separator text-white">:</span>
                   <br>
-                  <small class="countdown__time__label">Days</small>
+                  <small class="countdown__time__label text-white">Days</small>
                 </div>
               </div>
               <div class="col-6 col-md-3">
                 <div class="countdown__time">
-                  <span class="countdown__time__number countdown__time__number--hours">00</span>
-                  <span class="countdown__time__number-separator">:</span>
+                  <span class="countdown__time__number countdown__time__number--hours text-white">00</span>
+                  <span class="countdown__time__number-separator text-white">:</span>
                   <br>
-                  <small class="countdown__time__label">Hours</small>
+                  <small class="countdown__time__label text-white">Hours</small>
                 </div>
               </div>
               <div class="col-6 col-md-3">
                 <div class="countdown__time">
-                  <span class="countdown__time__number countdown__time__number--minutes">00</span>
-                  <span class="countdown__time__number-separator">:</span>
+                  <span class="countdown__time__number countdown__time__number--minutes text-white">00</span>
+                  <span class="countdown__time__number-separator text-white">:</span>
                   <br>
-                  <small class="countdown__time__label">Minutes</small>
+                  <small class="countdown__time__label text-white">Minutes</small>
                 </div>
               </div>
               <div class="col-6 col-md-3">
                 <div class="countdown__time countdown__time--last">
-                  <span class="countdown__time__number countdown__time__number--seconds">00</span>
+                  <span class="countdown__time__number countdown__time__number--seconds text-white">00</span>
                   <br>
-                  <small class="countdown__time__label">Seconds</small>
+                  <small class="countdown__time__label text-white">Seconds</small>
                 </div>
               </div>
             </div>
@@ -381,7 +388,7 @@
                 <button class="btn btn-primary btn-lg w-100">Buy tokens</button>
               </div>
               <div class="col-md-12 text-center">
-                <ul class="payment-methods">
+                <ul class="payment-methods text-white">
                   <li>
                     <i class="fa fa-cc-visa"></i>
                   </li>
@@ -409,7 +416,7 @@
   <!--/section-->
 
   <!--section-->
-  <section class="bg-dark skew skew--left" id="roadmap">
+  <section class="bg-light skew skew--left" id="roadmap">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 0,0 100,100" />
@@ -566,7 +573,7 @@
       <div class="row">
         <!--.col-*-->
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading wow fadeIn" data-wow-delay="0.1s">Team</h2>
+          <h2 class="section-heading text-white wow fadeIn" data-wow-delay="0.1s">Team</h2>
         </div>
         <!--/.col-*-->
       </div>
@@ -837,7 +844,7 @@
   <!--/section-->
 
   <!--section-->
-  <section class="bg-dark skew skew--right">
+  <section class="bg-light skew skew--right">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 100,0 100,100" />
@@ -971,7 +978,7 @@
             <defs>
               <linearGradient id="chart-gradient" x2="0" y2="1">
                 <stop offset="0" stop-color="#FF8F39" />
-                <stop offset="1" stop-color="black" />
+                <stop offset="1" stop-color="white" />
               </linearGradient>
             </defs>
           </svg>
@@ -1007,8 +1014,8 @@
         <!--/.col-*-->
         <!--.col-*-->
         <div class="col-md-5 ml-auto">
-          <h3 class="wow fadeInUp mb-3" data-wow-delay="0.1s">Why Encrypto?</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          <h3 class="wow fadeInUp text-white mb-3" data-wow-delay="0.1s">Why Encrypto?</h2>
+            <p class="wow fadeInUp text-white" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -1023,7 +1030,7 @@
   <!--/section-->
 
   <!--section-->
-  <section class="bg-dark skew skew--right">
+  <section class="bg-light skew skew--right">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 100,0 100,100" />
@@ -1080,7 +1087,7 @@
       <div class="row">
         <!--.col-*-->
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading wow fadeInUp" data-wow-delay="0.1s">Timeline</h2>
+          <h2 class="section-heading text-white wow fadeInUp" data-wow-delay="0.1s">Timeline</h2>
         </div>
         <!--/.col-*-->
       </div>
@@ -1162,7 +1169,7 @@
   <!--/section-->
 
   <!--section-->
-  <section class="bg-dark skew skew--right">
+  <section class="bg-light skew skew--right">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 0,0 100,100" />
@@ -1211,7 +1218,7 @@
       <div class="row">
         <!--.col-*-->
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading wow fadeIn" data-wow-delay="0.1s">Testimonials</h2>
+          <h2 class="section-heading text-white wow fadeIn" data-wow-delay="0.1s">Testimonials</h2>
         </div>
         <!--/.col-*-->
       </div>
@@ -1226,7 +1233,7 @@
         <div class="col-12 col-md-8 mx-auto">
           <div class="owl-carousel">
             <!--.item-->
-            <div class="item text-center">
+            <div class="item text-center text-white">
               <blockquote class="p-3">
                 "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make
                 the change and click save. Thanks, guys!"
@@ -1236,7 +1243,7 @@
             </div>
             <!--/.item-->
             <!--.item-->
-            <div class="item text-center">
+            <div class="item text-center text-white">
               <blockquote class="p-3">
                 "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make
                 the change and click save. Thanks, guys!"
@@ -1245,7 +1252,7 @@
             </div>
             <!--/.item-->
             <!--.item-->
-            <div class="item text-center">
+            <div class="item text-center text-white">
               <blockquote class="p-3">
                 "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make
                 the change and click save. Thanks, guys!"
@@ -1264,7 +1271,7 @@
   <!--/section-->
 
   <!--section-->
-  <section class="bg-dark skew skew--right" id="newsletter">
+  <section class="bg-light skew skew--right" id="newsletter">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 100,0 100,100" />
@@ -1301,7 +1308,7 @@
                 <!--/.col-*-->
                 <!--.col-*-->
                 <div class="col-md-3 col-lg-2 wow fadeIn" data-wow-delay="0.3s">
-                  <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </div>
                 <!--/.col-*-->
               </div>
@@ -1331,7 +1338,7 @@
       <div class="row">
         <!--.col-*-->
         <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading wow fadeIn" data-wow-delay="0.1s">Contact Us</h2>
+          <h2 class="section-heading text-white wow fadeIn" data-wow-delay="0.1s">Contact Us</h2>
         </div>
         <!--/.col-*-->
       </div>
@@ -1339,7 +1346,7 @@
       <!--.row-->
       <div class="row">
         <!--.col-*-->
-        <div class="col-lg-6 ml-auto wow fadeIn" data-wow-delay="0.1s">
+        <div class="col-lg-6 ml-auto text-white wow fadeIn" data-wow-delay="0.1s">
           <form id="contactForm" class="mb-5">
             <fieldset>
               <!--.form-group-->
@@ -1367,7 +1374,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-lg-3 offset-lg-1 mr-auto p-3 wow fadeIn" data-wow-delay="0.1s">
+        <div class="col-lg-3 offset-lg-1 text-white mr-auto p-3 wow fadeIn" data-wow-delay="0.1s">
           <p>
             <b>Visit us at:</b>
           </p>
@@ -1388,7 +1395,11 @@
   <!--/section-->
 
   <!--section-->
-  <section class="bg-dark p-5" id="partners">
+  <section id="map" data-coords="40.7420371, -73.9875635"></section>
+  <!--/section-->
+
+ <!--section-->
+ <section class="bg-light p-5" id="partners">
     <!--.container-->
     <div class="container text-center">
       <div class="owl-carousel">
@@ -1421,10 +1432,6 @@
     </div>
     <!--/.container-->
   </section>
-  <!--/section-->
-
-  <!--section-->
-  <section id="map" data-coords="40.7420371, -73.9875635"></section>
   <!--/section-->
 
   <!--footer-->
@@ -1605,6 +1612,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
+  <script src="vendor/flat-surface-shader/flat-surface-shader.js"></script>
   <script src="vendor/jquery.scrollspeed/jQuery.scrollSpeed.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/waypoints/jquery.waypoints.min.js"></script>

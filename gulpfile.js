@@ -1,19 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
-
-// Set the banner content
-var banner = ['/*!\n',
-  ' * ENCRYPTO - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2018-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' */\n',
-  ''
-].join('');
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -42,12 +32,6 @@ gulp.task('vendor', function() {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'))
-
-  // jQuery Easing
-  gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery-easing'))
 
   // Waypoints
   gulp.src([
@@ -108,12 +92,6 @@ gulp.task('vendor', function() {
       './node_modules/wowjs/dist/*.js'
     ])
     .pipe(gulp.dest('./vendor/wowjs/'))
-
-  // Dynamics.js
-  gulp.src([
-    './node_modules/dynamics.js/lib/*.js'
-  ])
-  .pipe(gulp.dest('./vendor/dynamics/'))
 
   // Anime.js
   gulp.src([

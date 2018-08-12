@@ -1,0 +1,109 @@
+@import "encrypto";
+
+$primary: #0d47a1;
+
+
+.text-primary {
+  color: $primary;
+}
+
+body {
+  color: $gray-800;
+  background-color: $primary;
+}
+
+header.intro h1,
+header.intro p {
+  color: $white;
+}
+
+section.skew {
+    .section__skew--top, 
+    .section__skew--bottom {
+      svg {
+        fill: $light;
+      }
+    }
+  }
+
+  #preloader {
+    background-color: $light;
+    .spinner:before {
+      border-top: 5px solid $primary;
+    }
+  }
+
+  section .section-heading {
+    color: $primary;
+  }
+
+  .stats-box {
+    .stats-box__header {
+      color: $gray-800;
+    }
+    .stats-box__icon {
+      color: $primary;
+    }
+  } 
+
+  #roadmap .roadmap .roadmap__item__label__circle {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  #timeline .timeline::after {
+    background-color: #fff;
+}
+
+#timeline .timeline .timeline__item::after {
+  border-color: #fff;
+}
+
+#distribution-chart {
+  text {
+    fill: $gray-800;
+  }
+  path {
+    stroke: $light !important;
+  }
+}
+
+.form-control {
+  border-color: $light;
+  color: #ebebeb;
+}
+
+#newsletter {
+  .form-control {
+    border-color: #ff6f00;
+    color: $gray-800;
+  }
+}
+
+#mainNav.navbar-shrink {
+  background-color: $light;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  .navbar-nav>li.nav-item>a.nav-link, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus, 
+  .language-select .language-select__btn {
+    color: $gray-800;
+  }
+}
+
+#ticker {
+  background-color: $light !important;
+  &.ticker--top {
+    border-bottom: 1px solid $gray-500;
+  }
+  &.ticker--bottom {
+    border-top: 1px solid $gray-500;
+  }
+  span {
+    font-weight: 700 !important;
+  }
+  .ticker__item__value {
+    color: $gray-500 !important;
+  }
+}
+
+.btn-social {
+  color: $primary;
+}
