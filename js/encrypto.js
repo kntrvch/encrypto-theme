@@ -622,6 +622,11 @@ $(window).on('scroll', function () {
     }
 });
 
+// Particles JS
+if($("#particles-js").length > 0) {
+    particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {});
+}
+
 // FSS background
 if ($('#background-container').length > 0) {
     var config = {};

@@ -72,10 +72,14 @@ section.skew {
   color: #ebebeb;
 }
 
-#newsletter {
+#newsletter, 
+.modal {
   .form-control {
     border-color: #ff6f00;
     color: $gray-800;
+    &::placeholder { 
+      color: $gray-800;
+    }
   }
 }
 
@@ -106,4 +110,40 @@ section.skew {
 
 .btn-social {
   color: $primary;
+}
+
+blockquote {
+  border: none;
+}
+
+#timeline .timeline .timeline__item::after {
+  background-color: $primary;
+}
+
+.modal-content {
+  background-color: rgba(255,255,255,1);
+}
+
+.modal {
+  .nav-tabs .nav-link {
+    color: $gray-800;
+    &.active {
+      color: #ff6f00;
+    }
+  }
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: $primary;
+}
+
+#sale {
+  background-color: rgba(13,71,161,.7);
+}
+
+.bg-body {
+  background-color: $primary !important;
 }
