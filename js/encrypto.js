@@ -306,7 +306,7 @@
     }
 
     // Validate contact form
-    if ($('#contact').length > 0) {
+    if ($('#contactForm').length > 0) {
         $("#contactForm").validate({
             rules: {
                 name: {
@@ -323,9 +323,9 @@
                 }
             },
             messages: {
-                username: {
-                    required: "Please enter a username",
-                    minlength: "Your username must consist of at least 2 characters"
+                name: {
+                    required: "Please enter your name",
+                    minlength: "Your name must consist of at least 2 characters"
                 },
                 email: "Please enter a valid email address",
                 message: "Your message is too short (required min. 20 characters)"
@@ -334,7 +334,7 @@
     }
 
     // Validate newsletter form
-    if ($('#newsletter').length > 0) {
+    if ($('#newsletterForm').length > 0) {
         $("#newsletterForm").validate({
             rules: {
                 email: {
@@ -344,6 +344,52 @@
             },
             messages: {
                 email: "Please enter a valid email address"
+            }
+        });
+    }
+
+    // Validate sign in form
+    if ($('#signinForm').length > 0) {
+        $("#signinForm").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                }, 
+                password: {
+                    required: true
+                }
+            },
+            messages: {
+                email: "Please enter a valid email address", 
+                password: "Please enter your password"
+            }
+        });
+    }
+
+    // Validate sign up form
+    if ($('#signupForm').length > 0) {
+        $("#signupForm").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                }, 
+                password1: {
+                    required: true
+                }, 
+                password2: {
+                    equalTo: "#signUpInputPassword1"
+                }, 
+                tos: {
+                    required: true
+                }
+            },
+            messages: {
+                email: "Please enter a valid email address", 
+                password1: "Please enter your password", 
+                password2: "Passwords do not match",
+                tos: "You must agree to the Terms of Service"
             }
         });
     }

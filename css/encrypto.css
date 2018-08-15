@@ -9350,7 +9350,7 @@ header.intro #mobile-image.visible {
   width: 200%;
   height: 200%;
   border-style: solid;
-  border-color: #101010;
+  border-color: rgba(16, 16, 16, 0.85);
   content: '';
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;

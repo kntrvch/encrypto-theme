@@ -61,60 +61,39 @@
                 </ul>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#structure">
+                  <a class="nav-link" href="#components">
                     Components
                   </a>
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link" href="#menu">
+                      <a class="nav-link" href="#ticker">
                         Ticker
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#header">
-                        Counter
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#sections">
+                      <a class="nav-link" href="#countdown">
                         Countdown
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#sections">
+                      <a class="nav-link" href="#charts">
                         Charts
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#sections">
+                      <a class="nav-link" href="#forms">
                         Forms
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#sections">
+                      <a class="nav-link" href="#map">
                         Map
                       </a>
                     </li>
                   </ul>
                 </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Reports
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Integrations
-                </a>
-              </li>
             </ul>
 
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Saved reports</span>
-              <a class="d-flex align-items-center text-muted" href="#">
-              </a>
-            </h6>
             <ul class="nav flex-column mb-2">
               <li class="nav-item">
                 <a class="nav-link" href="#plugins">
@@ -431,12 +410,10 @@
                   <code>fill</code> attribute for both SVG elements:</b>
               </p>
               
-              <pre id="code-7"><code data-language="css">
-section.skew#contact .section__skew--top svg, 
+              <pre id="code-7"><code data-language="css">section.skew#contact .section__skew--top svg, 
 section.skew#contact .section__skew--bottom svg {
   fill: black;
-}
-</code></pre>
+}</code></pre>
 <a class="copy-button float-right" data-clipboard-target="#code-7">
   Copy
   <i class="fa fa-copy"></i>
@@ -466,6 +443,299 @@ section.skew#contact .section__skew--bottom svg {
 
 
           </section>
+
+          <section id="components">
+            <h2>Components</h2>
+          
+            <article id="ticker">
+              <h3>Ticker</h3>
+          
+              <p>Ticker is a web component that allows you to have items scrolling indefinitely across the screen. In most cases it is used to display currency rates, trends and other info.</p>
+              <p>You need to have the following HTML structure:</p>
+
+              <pre id="code-20"><code data-language="html">&lt;!--Ticker--&gt;
+&lt;div class="ticker ticker--top" id="ticker"&gt;
+
+  &lt;!--.ticker__item--&gt;
+  &lt;div class="ticker__item"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;!--/.ticker__item--&gt;
+  &lt;!--.ticker__item--&gt;
+  &lt;div class="ticker__item"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;!--/.ticker__item--&gt;
+  &lt;!--.ticker__item--&gt;
+  &lt;div class="ticker__item"&gt;
+  ...
+  &lt;/div&gt;
+  &lt;!--/.ticker__item--&gt;
+    
+&lt;/div&gt;</code></pre>
+                <a class="copy-button float-right" data-clipboard-target="#code-20">
+                  Copy
+                  <i class="fa fa-copy"></i>
+                </a>
+                <br>
+
+                <p>There are two possible locations for the ticker - top and bottom - use <code>&lt;div class="ticker ticker--top" id="ticker"&gt;</code> and <code>&lt;div class="ticker ticker--bottom" id="ticker"&gt;</code> respectively.</p>
+
+            </article>
+
+            <article id="countdown">
+              <h3>Countdown</h3>
+          
+              <p>You can set end date via <code>data-end</code> attribute</p>
+
+<pre id="code-21"><code data-language="html">&lt;div class="countdown p-3 text-center wow fadeInUp" data-end="10/31/2018 12:00:00 AM"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+                                  <a class="copy-button float-right" data-clipboard-target="#code-21">
+                                    Copy
+                                    <i class="fa fa-copy"></i>
+                                  </a>
+          
+              <br>
+              <br>
+              <p class="alert alert-warning">It is important to provide date in format <b>dd/MM/yyyy hh:mm:ss a</b></p>
+            </article>
+
+            <article id="charts">
+              <h3>Charts</h3>
+          <p>ENCRYPTO uses morris.js library to render beautiful and 100% responsive charts. </p>
+          <p>By default there are two charts in the template:</p>
+          <ul class="list-unstyled">
+              <li>- distribution donut chart</li>
+              <li>- trending line chart</li>
+            </ul>
+
+<p>You can customize them via JS code in <em>js/encrypto.js file</em></p>
+
+<br>
+                <h5>Donut chart</h5>
+                <br>
+                <br>
+<pre id="code-22"><code data-language="javascript">Morris.Donut({
+  element: 'distribution-chart',
+  data: [
+    { label: "Download Sales", value: 12 },
+    { label: "In-Store Sales", value: 30 },
+    { label: "Mail-Order Sales", value: 20 }
+  ],
+  resize: true,
+  colors: ['#ff6f00', '#6610f2', '#e83e8c', '#f0ad4e', '#5cb85c', '#5bc0de'],
+  formatter: function (y, data) { return y + '%' }
+});
+</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-22">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
+
+                <br>
+                <h5>Line chart</h5>
+                <br>
+                <br>
+<pre id="code-23"><code data-language="javascript">Morris.Line({
+  element: 'trending-chart',
+  data: [
+    { y: '2012', a: 0, b: 0 },
+    { y: '2013', a: 10, b: 0 },
+    { y: '2014', a: 25, b: 10 },
+    { y: '2015', a: 50, b: 15 },
+    { y: '2016', a: 80, b: 40 },
+    { y: '2017', a: 95, b: 65 },
+    { y: '2018', a: 100, b: 75 }
+  ],
+  xkey: 'y',
+  ykeys: ['a', 'b'],
+  labels: ['Encrypto', 'Average'],
+  hideHover: "auto",
+  smooth: false,
+  lineColors: ['#ff6f00', '#1a237e'],
+  resize: true
+});
+</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-23">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
+                <p><b>For more information please refer to <a href="http://morrisjs.github.io/morris.js/">morris.js documentation</a></b></p>
+
+            </article>
+
+            <article id="forms">
+              <h3>Forms</h3>
+          
+              <p>There are 4 forms in ENCRYPTO template:</p>
+              <ul class="list-unstyled">
+                <li>- sign up</li>
+                <li>- sign in</li>
+                <li>- newsletter</li>
+                <li>- contact</li>
+              </ul>
+              <br>
+                <h5>Sign up form</h5>
+                <br>
+                <br>
+<pre id="code-16"><code data-language="html">&lt;!--#signinForm--&gt;
+  &lt;form id="signinForm"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="signInInputEmail1"&gt;Email address&lt;/label&gt;
+      &lt;input type="email" name="email" class="form-control form-control-lg" id="signInInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="signInInputPassword1"&gt;Password&lt;/label&gt;
+      &lt;input type="password" name="password" class="form-control form-control-lg" id="signInInputPassword1" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;div class="custom-control custom-checkbox"&gt;
+        &lt;input type="checkbox" name="remember" class="custom-control-input" id="signInCheck" checked=""&gt;
+        &lt;label class="custom-control-label" for="signInCheck"&gt;Remember me&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary btn-lg"&gt;Sign In&lt;/button&gt;
+  &lt;/form&gt;
+&lt;!--/#signinForm--&gt;</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-16">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
+
+                <h5>Sign in form</h5>
+                <br>
+                <br>
+<pre id="code-17"><code data-language="html">&lt;!--#signupForm--&gt;
+&lt;form id="signupForm"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="signUpInputEmail"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" name="email" class="form-control form-control-lg" id="signUpInputEmail" aria-describedby="emailHelp"
+      placeholder="Enter email"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="signUpInputPassword1"&gt;Password&lt;/label&gt;
+    &lt;input type="password" name="password1" class="form-control form-control-lg" id="signUpInputPassword1" placeholder="Password"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="signUpInputPassword2"&gt;Confirm password&lt;/label&gt;
+    &lt;input type="password" name="password2" class="form-control form-control-lg" id="signUpInputPassword2" placeholder="Password"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="custom-control custom-checkbox"&gt;
+      &lt;input type="checkbox" name="tos" class="custom-control-input" id="signUpCheck"&gt;
+      &lt;label class="custom-control-label" for="signUpCheck"&gt;I have read and accept the
+        &lt;a href=""&gt;Terms of Service&lt;/a&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary btn-lg"&gt;Sign Up&lt;/button&gt;
+&lt;/form&gt;
+&lt;!--/#signinForm--&gt;</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-17">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
+
+                <h5>Newsletter form</h5>
+                <br>
+                <br>
+<pre id="code-18"><code data-language="html">&lt;!--#newsletterForm--&gt;
+&lt;form id="newsletterForm"&gt;
+  &lt;!--.container--&gt;
+  &lt;div class="container"&gt;
+    &lt;!--.row--&gt;
+    &lt;div class="row"&gt;
+      &lt;!--.col-*--&gt;
+      &lt;div class="col-md-9 col-lg-10 wow fadeIn" data-wow-delay="0.2s"&gt;
+        &lt;input name="email" type="email" class="form-control form-control-lg mb-3 m-md-0" placeholder="Email address" aria-label="Recipient's username"&gt;
+      &lt;/div&gt;
+      &lt;!--/.col-*--&gt;
+      &lt;!--.col-*--&gt;
+      &lt;div class="col-md-3 col-lg-2 wow fadeIn" data-wow-delay="0.3s"&gt;
+        &lt;button type="submit" class="btn btn-outline-primary btn-lg"&gt;Submit&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;!--/.col-*--&gt;
+    &lt;/div&gt;
+    &lt;!--/.row--&gt;
+  &lt;/div&gt;
+  &lt;!--/.container--&gt;
+&lt;/form&gt;
+&lt;!--/#newsletterForm--&gt;</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-18">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
+          
+                <h5>Contact form</h5>
+                <br>
+                <br>
+<pre id="code-19"><code data-language="html">&lt;!--#contactForm--&gt;
+&lt;form id="contactForm" class="mb-5"&gt;
+    &lt;fieldset&gt;
+      &lt;!--.form-group--&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputName"&gt;Name&lt;/label&gt;
+        &lt;input type="text" name="name" class="form-control form-control-lg" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Your Name"&gt;
+      &lt;/div&gt;
+      &lt;!--/.form-group--&gt;
+      &lt;!--.form-group--&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputEmail"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="form-control form-control-lg" id="exampleInputEmail" name="email" aria-describedby="emailHelp"
+          placeholder="Enter email"&gt;
+      &lt;/div&gt;
+      &lt;!--/.form-group--&gt;
+      &lt;!--.form-group--&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="exampleTextarea"&gt;Message&lt;/label&gt;
+        &lt;textarea class="form-control form-control-lg" id="exampleTextarea" name="message" rows="3"&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+      &lt;!--/.form-group--&gt;
+      &lt;button type="submit" class="btn btn-primary btn-lg"&gt;Send&lt;/button&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+  &lt;!--/#contactForm--&gt;</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-19">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
+                <p class="alert alert-warning">All ENCRYPTO forms are automatically validated with JS on submit, 
+                  however you should think of your own server-side validation mechanism to keep your website safe and secure.</p>
+                <br>
+          
+            </article>
+
+            <article id="map">
+              <h3>Map</h3>
+          
+              <p>You can set default map location with <code>data-coords</code> attribute</p>
+
+<pre id="code-15"><code data-language="html">&lt;section id="map" data-coords="40.7420371, -73.9875635"&gt;&lt;/section&gt;
+</code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-15">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
+            </article>
+          
+          </section>
+
+
+
           <section id="plugins">
             <h2>Plugins</h2>
             <p>
