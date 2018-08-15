@@ -173,4 +173,8 @@ h5 {
 
 .copy-button {
   cursor: pointer;
+  background: #141414;
+  color: #F8F8F8 !important;
+  padding: 5px;
+  margin-top: -20px;
 }

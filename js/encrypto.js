@@ -34,7 +34,7 @@
     $('.counter').counterUp();
 
     // Collapse Navbar
-    if ($("body").hasClass("home")) {
+    if ($("body").hasClass("home") && !($("body").hasClass("navbar-static"))) {
         var navbarCollapse = function () {
             if ($("#mainNav").offset().top > 100) {
                 $("#mainNav").addClass("navbar-shrink");

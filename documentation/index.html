@@ -54,13 +54,50 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#sections">
-                        Sections
-                      </a>
-                    </li>
+                    <a class="nav-link" href="#sections">
+                      Sections
+                    </a>
+                  </li>
                 </ul>
               </li>
-              
+              <li class="nav-item">
+                  <a class="nav-link" href="#structure">
+                    Components
+                  </a>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#menu">
+                        Ticker
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#header">
+                        Counter
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sections">
+                        Countdown
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sections">
+                        Charts
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sections">
+                        Forms
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sections">
+                        Map
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   Reports
@@ -165,10 +202,6 @@
             </article>
             <article>
               <h3>Basic HTML structure</h3>
-              <a class="copy-button float-right" data-clipboard-target="#code-1">
-                  Copy <i class="fa fa-copy"></i> 
-              </a>
-              <br>
               <br>
               <pre id="code-1">
 <code data-language="html">
@@ -199,73 +232,154 @@
 &lt;/body&gt;
 </code>
 </pre>
+<a class="copy-button float-right" data-clipboard-target="#code-1">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
             </article>
 
             <article id="menu">
               <h3>Menu</h3>
-              <p>To edit the main menu, you have to look for the <code>&lt;ul class="navbar-nav ml-auto mr-3"&gt;...&lt;/ul&gt;</code> element</p>
+              <p>To edit the main menu, you have to look for the
+                <code>&lt;ul class="navbar-nav ml-auto mr-3"&gt;...&lt;/ul&gt;</code> element</p>
+              <pre id="code-2"><code data-language="html">&lt;ul class="navbar-nav ml-auto mr-3"&gt;...&lt;/ul&gt;</code></pre>
               <a class="copy-button float-right" data-clipboard-target="#code-2">
-                  Copy <i class="fa fa-copy"></i> 
+                Copy
+                <i class="fa fa-copy"></i>
               </a>
               <br>
-              <br>
-                <pre id="code-2"><code data-language="html">&lt;ul class="navbar-nav ml-auto mr-3"&gt;...&lt;/ul&gt;</code></pre>
-              
               <ul class="list-unstyled">
                 <li>- Each menu item links to a section (see section Sections below) in the main content.</li>
                 <li>- Each menu item should follow this format:</li>
               </ul>
-              
-<a class="copy-button float-right" data-clipboard-target="#code-3">
-    Copy <i class="fa fa-copy"></i> 
-</a>
-<br>
-<br>
-<pre id="code-3"><code data-language="html">&lt;li class="nav-item"&gt;
+
+              <pre id="code-3"><code data-language="html">&lt;li class="nav-item"&gt;
   &lt;a class="nav-link" href="#contact"&gt;Contact&lt;/a&gt;
 &lt;/li&gt;</code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-3">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
+<h5>Static navbar</h5>
+<p>To make the navbar static add <em>.navbar-static</em> CSS class to <code>&lt;body&gt;&lt;/body&gt;</code> element, like this:</p>
+
+<pre id="code-9"><code data-language="html">&lt;body id="page-top" class="js home navbar-static"&gt;</code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-9">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
             </article>
 
             <article id="header">
               <h3>Header</h3>
+
+              <p>Header animation is the first thing people see when they visit your website. It should draw their attention to your business and give visitors the best first impression possible. </p>
+            <p>There are three background animations available:</p>
+            <ul class="list-unstyled">
+              <li>- gradient</li>
+              <li>- flat surface shader (FSS)</li>
+              <li>- particles effect</li>
+            </ul>
+            <br>
+              <h5>Gradient background</h5>
+              <br>
+              <br>
+<pre id="code-10"><code data-language="html">&lt;!--BACKGROUND EFFECT--&gt;
+  &lt;div class="gradient-bg" id="gradient"&gt;&lt;/div&gt;
+&lt;!--/BACKGROUND EFFECT--&gt;</code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-10">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+              <br>
+              <br>
+              <h5>FSS background</h5>
+              <br>
+              <br>
+
+<pre id="code-11"><code data-language="html">&lt;!--BACKGROUND EFFECT--&gt;
+&lt;!--.fss-container--&gt;
+&lt;div id="background-container" class="background-container"&gt;
+  &lt;div id="background-output" class="background-output"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--/.fss-container--&gt;
+&lt;!--/BACKGROUND EFFECT--&gt;</code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-11">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
+              <br>
+              <h5>Particles background</h5>
+              <br>
+              <br>
+              
+<pre id="code-12"><code data-language="html">&lt;!--BACKGROUND EFFECT--&gt;
+  &lt;div id="particles-js"&gt;&lt;/div&gt;
+&lt;!--/BACKGROUND EFFECT--&gt;</code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-12">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
+
+<br>
+              <h5>Mobile animation</h5>
+              <p>To disable mobile wireframe animation follow these steps:</p>
+              <p>1. Remove the <code>&lt;div&gt;</code> element with <em>id</em> attribute <em>#mobile</em> </p>
+<pre id="code-13"><code data-language="html">&lt;div class="d-none d-md-block" id="mobile"&gt;
+  &lt;object id="mobile-svg" type="image/svg+xml" data="img/mobile-svg.svg"&gt;&lt;/object&gt;
+&lt;/div&gt;</code></pre>
+                <a class="copy-button float-right" data-clipboard-target="#code-13">
+                    Copy
+                    <i class="fa fa-copy"></i>
+                  </a>
+                  <br>
+                  <p>2. Add <em>.visible</em> class to the <em>#mobile-image</em> element </p>
+<pre id="code-13"><code data-language="html">&lt;img src="img/mobile-image.png" class="d-none d-md-block visible" id="mobile-image" alt=""&gt;</code></pre>
+                                  <a class="copy-button float-right" data-clipboard-target="#code-13">
+                                      Copy
+                                      <i class="fa fa-copy"></i>
+                                    </a>
+<br>
+             
             </article>
 
             <article id="sections">
-                <h3>Sections</h3>
-                  
-                  <p>The theme includes three types of sections:</p>
-                  <ul class="list-unstyled">
-                      <li>- normal</li>
-                      <li>- left-skewed</li>
-                      <li>- right-skewed</li>
-                    </ul>
-<br>
-<br>
-                    <h5>Normal section</h5>
-                    <div class="skew-demo skew-demo--normal"></div>
-                    <br>
-<a class="copy-button float-right" data-clipboard-target="#code-4">
-    Copy <i class="fa fa-copy"></i> 
-</a>
-<br>
-<br>
-                    
-<pre id="code-4"><code data-language="html">&lt;section&gt;
+              <h3>Sections</h3>
+
+              <p>The theme includes three types of sections:</p>
+              <ul class="list-unstyled">
+                <li>- normal</li>
+                <li>- left-skewed</li>
+                <li>- right-skewed</li>
+              </ul>
+              <br>
+              <br>
+              <h5>Normal section</h5>
+              <div class="skew-demo skew-demo--normal"></div>
+              <br>
+              <br>
+              <pre id="code-4"><code data-language="html">&lt;section&gt;
   &lt;!--section content--&gt;  
    ...
   &lt;!--/section content--&gt;    
 &lt;/section&gt;</code></pre>
-<br>
-<br>
-<h5>Left-skewed section</h5>
-<div class="skew-demo skew-demo--left"></div>
-<br>
-<a class="copy-button float-right" data-clipboard-target="#code-5">
-    Copy <i class="fa fa-copy"></i> 
+<a class="copy-button float-right" data-clipboard-target="#code-4">
+  Copy
+  <i class="fa fa-copy"></i>
 </a>
-<br>
-<br>
-<pre id="code-5"><code data-language="html">&lt;section class="skew skew--left"&gt;
+              <br>
+              <br>
+              <h5>Left-skewed section</h5>
+              <div class="skew-demo skew-demo--left"></div>
+              <br>
+              <br>
+
+              <pre id="code-5"><code data-language="html">&lt;section class="skew skew--left"&gt;
   &lt;div class="section__skew--top"&gt;
     &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"&gt;
       &lt;polygon points="0,100 0,0 100,100" /&gt;
@@ -280,19 +394,18 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre>
-<br>
-<br>
-<h5>Right-skewed section</h5>
-<div class="skew-demo skew-demo--right"></div>
-
-<br>
-<a class="copy-button float-right" data-clipboard-target="#code-6">
-    Copy <i class="fa fa-copy"></i> 
+<a class="copy-button float-right" data-clipboard-target="#code-5">
+  Copy
+  <i class="fa fa-copy"></i>
 </a>
 <br>
-<br>
-
-<pre id="code-6"><code data-language="html">&lt;section class="skew skew--right"&gt;
+              <br>
+              <h5>Right-skewed section</h5>
+              <div class="skew-demo skew-demo--right"></div>
+              <br>
+              <br>
+              
+              <pre id="code-6"><code data-language="html">&lt;section class="skew skew--right"&gt;
   &lt;div class="section__skew--top"&gt;
     &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"&gt;
       &lt;polygon points="0,100 100,0 100,100" /&gt;
@@ -307,34 +420,49 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre>
-<br>
-<p><b>When applying custom background color to skewed section, remember to set proper <code>fill</code> attribute for both SVG elements:</b></p>
-<a class="copy-button float-right" data-clipboard-target="#code-7">
-    Copy <i class="fa fa-copy"></i> 
+<a class="copy-button float-right" data-clipboard-target="#code-6">
+  Copy
+  <i class="fa fa-copy"></i>
 </a>
 <br>
-<br>
-
-<pre id="code-7"><code data-language="css">
+              <br>
+              <p>
+                <b>When applying custom background color to skewed section, remember to set proper
+                  <code>fill</code> attribute for both SVG elements:</b>
+              </p>
+              
+              <pre id="code-7"><code data-language="css">
 section.skew#contact .section__skew--top svg, 
 section.skew#contact .section__skew--bottom svg {
   fill: black;
 }
 </code></pre>
+<a class="copy-button float-right" data-clipboard-target="#code-7">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
 <br>
-<h5>Parallax effect</h5>
-<p><i class="fa fa-share"></i><b>EN</b>CRYPTO template comes with <b>Parallax.js</b> plugin which creates an element of depth and distance giving your website three-dimension feel.</p>
-<p>You can set the parallax effect to all unskewed sections. If you need further info on plugin configuration, please visit <a href="http://pixelcog.github.io/parallax.js/">Parallax.js website</a></p> 
-  <a class="copy-button float-right" data-clipboard-target="#code-8">
-      Copy <i class="fa fa-copy"></i> 
-  </a>
-  <br>
-  <br>
-<pre id="code-8"><code data-language="html">&lt;section class="parallax-window" id="sale" data-parallax="scroll" data-image-src="img/bg-sale.jpg"&gt;
+              <br>
+              <h5>Parallax effect</h5>
+              <p>
+                <i class="fa fa-share"></i>
+                <b>EN</b>CRYPTO template comes with
+                <b>Parallax.js</b> plugin which creates an element of depth and distance giving your website three-dimension
+                feel.</p>
+              <p>You can set the parallax effect to all unskewed sections. If you need further info on plugin configuration,
+                please visit
+                <a href="http://pixelcog.github.io/parallax.js/">Parallax.js website</a>
+              </p>
+              
+              <pre id="code-8"><code data-language="html">&lt;section class="parallax-window" id="sale" data-parallax="scroll" data-image-src="img/bg-sale.jpg"&gt;
 </code></pre>
-</section>
+<a class="copy-button float-right" data-clipboard-target="#code-8">
+  Copy
+  <i class="fa fa-copy"></i>
+</a>
+<br>
 
-</article>
+          </article>
 
 
           </section>
@@ -374,6 +502,10 @@ section.skew#contact .section__skew--bottom svg {
                 <a href="https://maxwellito.github.io/vivus/">https://maxwellito.github.io/vivus/</a>)</li>
               <li>anime (
                 <a href="http://animejs.com/">http://animejs.com/</a>)</li>
+              <li>particles.js (
+                <a href="https://vincentgarreau.com/particles.js/">https://vincentgarreau.com/particles.js/</a>)</li>
+              <li>Flat Surface Shader (
+                <a href="http://matthew.wagerfield.com/flat-surface-shader/">http://matthew.wagerfield.com/flat-surface-shader/</a>)</li>
               <li>Google Map marker by Dylan Vann (
                 <a href="https://dylanvann.com/custom-animated-google-maps-markers/">https://dylanvann.com/custom-animated-google-maps-markers/</a>)</li>
               <li>Bootstrap (
