@@ -3,7 +3,8 @@
 
     document.body.className = document.body.className.replace("no-js", "js");
 
-    //jQuery.scrollSpeed(100, 800, 'easeOutCubic');
+    // EXPERIMENTAL smooth scrolling
+    // jQuery.scrollSpeed(100, 800, 'easeOutCubic');
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
@@ -12,7 +13,7 @@
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
-                    scrollTop: (target.offset().top - 57)
+                    scrollTop: (target.offset().top - 120)
                 }, 1000, "easeInOutQuad");
                 return false;
             }
@@ -27,7 +28,7 @@
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
         target: '#mainNav',
-        offset: 57
+        offset: 120
     });
 
     // Stats counter
@@ -477,9 +478,6 @@
 
     setInterval(updateGradient, 10);
 
-    // 03 Animation
-    //var anim = new Vivus('traces', { type: 'delayed', duration: 200, start: 'autostart', forceRender: false }, function () {});
-
     // ICO countdown
     if ($('.countdown').length > 0) {
         var deadline = $(".countdown").attr('data-end');
@@ -582,24 +580,15 @@ $(window).on('load', function () {
     }
 });
 
-// 01 Animation
+// Mobile Animation
 $(window).on('load', function () {
     if ($('#mobile').length > 0) {
         var anim = new Vivus('mobile-svg', { duration: 100, type: 'sync', start: 'autostart', forceRender: false }, function () {
-            //$('#mobile-image').fadeIn('slow');
             $('#mobile-image').addClass('visible');
             $('#mobile-svg').fadeOut();
         });
     }
 });
-
-// 04 Animation
-// $(window).on('load', function () {
-//     if ($('#trace').length > 0) {
-//         var anim = new Vivus('trace-svg', { duration: 200, type: 'sync', start: 'autostart', forceRender: false }, function () {
-//         });
-//     }
-// });
 
 // Ticker
 $(window).on('load', function () {
@@ -629,36 +618,6 @@ $(window).on('load', function () {
     }
 });
 
-// Vector map animation
-$(window).on('load', function () {
-    if ($('#map-svg').length > 0) {
-        var trigger = new Waypoint({
-            element: document.getElementById('map-svg-lines'),
-            handler: function (direction) {
-                var a = document.getElementById("map-svg-lines");
-                var svgDoc = a.contentDocument;
-                var pathEls = svgDoc.querySelectorAll("path.line");
-                for (var i = 0; i < pathEls.length; i++) {
-                    var pathEl = pathEls[i];
-                    var offset = anime.setDashoffset(pathEl);
-                    pathEl.setAttribute('stroke-dashoffset', offset);
-                    anime({
-                        targets: pathEl,
-                        strokeDashoffset: [offset, 0],
-                        duration: anime.random(1000, 3000),
-                        delay: function (el, i) { return i * 250 },
-                        loop: false,
-                        direction: 'normal',
-                        easing: 'easeInOutSine',
-                        autoplay: true
-                    });
-                }
-            },
-            offset: '95%'
-        })
-    }
-});
-
 // Scroll to top
 $(window).on('scroll', function () {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -670,7 +629,118 @@ $(window).on('scroll', function () {
 
 // Particles JS
 if($("#particles-js").length > 0) {
-    particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {});
+    var particleConfig = {
+        "particles": {
+            "number": {
+                "value": 100,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 3
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 5,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 200,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 3,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": false,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": false,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    };
+    
+    particlesJS('particles-js', particleConfig, function() {});
 }
 
 // FSS background

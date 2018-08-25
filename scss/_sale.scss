@@ -21,6 +21,25 @@
         text-transform: uppercase;
       }
     }
+    .progress {
+      .progress__label {
+        margin-top: 32px;
+        position: absolute;
+        z-index: 9999999;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        &::before {
+          height: 32px;
+          width: 1px;
+          margin-top: -40px;
+          position: absolute;
+          background: #fff;
+          content: '';
+          z-index: -1;
+        }
+      }
+    }
   }
   
   @media (max-width: 768px) {

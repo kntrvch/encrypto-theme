@@ -106,12 +106,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  FAQ
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="#contact">
                   Contact
                 </a>
               </li>
@@ -120,6 +115,12 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome!</h1>
+                <p class="lead">Thank you for purchasing ENCRYPTO template.</p>
+                <hr class="my-4">
+                <p>If you have any questions about the template, please feel free to contact us via email: <a href="mailto:contact@kaiseidesign.com">contact@kaiseidesign.com</a></p>
+              </div>
 
           <section id="about">
             <h2>About</h2>
@@ -131,19 +132,12 @@
 
           <section id="installation">
             <h2>Installation</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Unpack <em>encrypto.zip</em> into your root project folder (/www, /htdocs, /httpdocs - depending on your hosting settings and technology stack). </p>
           </section>
 
           <section id="structure">
             <h2>Structure</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+            
             <article>
               <h3>What's included</h3>
               <p>
@@ -715,6 +709,19 @@ section.skew#contact .section__skew--bottom svg {
                 <p class="alert alert-warning">All ENCRYPTO forms are automatically validated with JS on submit, 
                   however you should think of your own server-side validation mechanism to keep your website safe and secure.</p>
                 <br>
+                <br>
+          
+                <h5>Setting up contact email</h5>
+                <p>Open <em>server/mail.php</em> file and locate following lines:</p>
+<pre id="code-40"><code data-language="php">&lt;?php 
+  if(isset($_POST['submit'])) {
+      $to = "email@example.com"; // your Email address</code></pre>
+  <a class="copy-button float-right" data-clipboard-target="#code-40">
+    Copy
+    <i class="fa fa-copy"></i>
+  </a>
+                <br>
+                <br>
           
             </article>
 
@@ -785,28 +792,33 @@ section.skew#contact .section__skew--bottom svg {
               <li>Google Fonts (
                 <a href="http://www.google.com/webfonts">http://www.google.com/webfonts</a>)</li>
             </ul>
+            <h5>Additional content</h5>
+            <ul class="list-unstyled">
+              <li>Unsplash (
+                <a href="https://unsplash.com/">https://unsplash.com/</a>)</li>
+              <li>Pexels (
+                <a href="https://pexels.com/">https://pexels.com/</a>)</li>
+              <li>Pixabay.css (
+                <a href="https://pixabay.com/">https://pixabay.com/</a>)</li>
+            </ul>
           </section>
           <section id="changelog">
             <h2>Changelog</h2>
 
             <div class="changelog-item">
-              <h5>v. 1.1.0</h5>
-              <em class="text-muted">May 17, 2018</em>
-              <br>
-              <ul class="list-unstyled">
-                <li>- Light theme</li>
-                <li>- Mobile wireframe animation</li>
-              </ul>
-            </div>
-
-            <div class="changelog-item">
-              <h5>v. 1.0.1</h5>
-              <em class="text-muted">May 5, 2018</em>
+              <h5>v1.0.1</h5>
+              <em class="text-muted">Aug, 2018</em>
               <br>
               <ul class="list-unstyled">
                 <li>- Template release</li>
               </ul>
             </div>
+
+          </section>
+          <section id="contact" style="height:800px">
+            <h2>Contact</h2>
+
+            <p>Contact us via email: <a href="mailto:contact@kaiseidesign.com">contact@kaiseidesign.com</a></p>
 
           </section>
           <footer>

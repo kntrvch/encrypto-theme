@@ -111,23 +111,24 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!--Main menu-->
       <ul class="navbar-nav ml-auto mr-3">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#header">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link js-scroll-trigger" href="#features">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link js-scroll-trigger" href="#team">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
         </li>
       </ul>
-
+      <!--/Main menu-->
       <div class="dropdown language-select mr-3">
         <button class="btn dropdown-toggle language-select__btn" type="button" id="languageMenuButton" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
@@ -147,10 +148,14 @@
 
   <!-- Header -->
   <!--header-->
-  <header class="intro d-flex">
+  <header class="intro d-flex" id="header">
 
     <!--BACKGROUND EFFECT-->
-    <div class="gradient-bg" id="gradient"></div>
+    <!--.fss-container-->
+    <div id="background-container" class="background-container">
+      <div id="background-output" class="background-output"></div>
+    </div>
+    <!--/.fss-container-->
     <!--/BACKGROUND EFFECT-->
 
     <!--.container-->
@@ -160,16 +165,14 @@
         <!--.col-*-->
         <div class="col-lg-10">
           <h1 class="page-header text-uppercase mb-3 animated">
-            Great design for great business
+            Blockchain solution for your business
           </h1>
         </div>
         <!--/.col-*-->
         <!--.col-*-->
         <div class="col-lg-8">
 
-          <p class="text-faded mb-3 lead animated"> ENCRYPTO strives to give customers the most compelling design experience possible.
-            <br> At affordable prices we make business beautiful.
-          </p>
+          <p class="text-faded mb-3 lead animated"> We want to enable every company in the world to receive secure payments with no transaction costs at all.</p>
 
           <a class="btn btn-primary btn-lg animated mt-3 mr-2" href="#">Sign Up</a>
           <a class="btn btn-outline-light btn-lg animated mt-3" href="#">Whitepaper</a>
@@ -204,14 +207,34 @@
     </div>
     <!--/.container-->
     <div class="d-none d-md-block" id="mobile">
-      <object id="mobile-svg" type="image/svg+xml" data="img/mobile-svg.svg"></object>
+      <!--Mobile wireframe-->
+      <svg xmlns="http://www.w3.org/2000/svg" width="95.706642mm" height="197.55725mm" viewBox="0 0 95.706643 197.55725" id="mobile-svg">
+
+        <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" style="display:inline" transform="translate(-29.535862,-34.177647)">
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 41.086935,34.28348 h 72.604495 c 6.34068,0 11.44524,4.714804 11.44524,11.055491 V 220.40424 c 0,6.34069 -5.10456,11.22483 -11.44524,11.22483 H 41.086935 c -6.340686,0 -11.44524,-4.88414 -11.44524,-11.22483 V 45.338971 c 0,-6.340687 5.104554,-11.055491 11.44524,-11.055491 z"
+            id="path44" inkscape:connector-curvature="0" />
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 40.529518,35.921554 h 73.719272 c 5.0927,0 9.19254,4.099842 9.19254,9.192542 V 220.66197 c 0,5.0927 -4.09984,9.19254 -9.19254,9.19254 H 40.529518 c -5.0927,0 -9.192542,-4.09984 -9.192542,-9.19254 V 45.114096 c 0,-5.0927 4.099842,-9.192542 9.192542,-9.192542 z"
+            id="path36" inkscape:connector-curvature="0" />
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 84.760797,219.16128 a 7.259038,7.259038 0 0 1 -7.259038,7.25904 7.259038,7.259038 0 0 1 -7.259038,-7.25904 7.259038,7.259038 0 0 1 7.259038,-7.25904 7.259038,7.259038 0 0 1 7.259038,7.25904 z"
+            id="path47" inkscape:connector-curvature="0" />
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 34.60144,57.312475 h 85.57542 V 208.37475 H 34.60144 Z"
+            id="path45" inkscape:connector-curvature="0" />
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 70.799264,45.469019 h 13.278273 c 0.297209,0 0.536505,0.239277 0.536505,0.536505 0,0.297228 -0.239277,0.536504 -0.536505,0.536504 H 70.799264 c -0.297237,0 -0.536505,-0.239282 -0.536505,-0.536504 0,-0.297223 0.239277,-0.536505 0.536505,-0.536505 z"
+            id="path42" inkscape:connector-curvature="0" />
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 63.736652,46.534803 a 1.6646314,1.6646314 0 0 1 -1.664631,1.664632 1.6646314,1.6646314 0 0 1 -1.664631,-1.664632 1.6646314,1.6646314 0 0 1 1.664631,-1.664631 1.6646314,1.6646314 0 0 1 1.664631,1.664631 z"
+            id="path40" inkscape:connector-curvature="0" />
+          <path style="fill:none;stroke:#fff;stroke-width:0.21166667" d="m 78.601297,40.631279 a 1.1628685,1.1628685 0 0 1 -1.162868,1.162868 1.1628685,1.1628685 0 0 1 -1.162869,-1.162868 1.1628685,1.1628685 0 0 1 1.162869,-1.162869 1.1628685,1.1628685 0 0 1 1.162868,1.162869 z"
+            id="path38" inkscape:connector-curvature="0" />
+        </g>
+      </svg>
+      <!--/Mobile wireframe-->
     </div>
     <img src="img/mobile-image_b.png" class="d-none d-md-block" id="mobile-image" alt="">
   </header>
   <!--/header-->
 
   <!--section-->
-  <section class="bg-dark skew skew--right">
+  <section class="bg-dark skew skew--right" id="features">
     <div class="section__skew--top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,100 100,0 100,100" />
@@ -340,7 +363,9 @@
         <div class="col-12 col-sm-12 col-md-8 col-xl-6 mx-auto pt-5 pb-5">
           <h3 class="text-primary text-center mb-3 wow wow fadeInUp">Pre ICO stage ends in:</h3>
           <div class="countdown p-3 text-center wow fadeInUp" data-end="10/31/2018 12:00:00 AM">
+            <!--.row-->
             <div class="row">
+              <!--.col-*-->
               <div class="col-6 col-md-3">
                 <div class="countdown__time countdown__time--first">
                   <span class="countdown__time__number countdown__time__number--days">00</span>
@@ -349,6 +374,8 @@
                   <small class="countdown__time__label">Days</small>
                 </div>
               </div>
+              <!--/.col-*-->
+              <!--.col-*-->
               <div class="col-6 col-md-3">
                 <div class="countdown__time">
                   <span class="countdown__time__number countdown__time__number--hours">00</span>
@@ -357,6 +384,8 @@
                   <small class="countdown__time__label">Hours</small>
                 </div>
               </div>
+              <!--/.col-*-->
+              <!--.col-*-->
               <div class="col-6 col-md-3">
                 <div class="countdown__time">
                   <span class="countdown__time__number countdown__time__number--minutes">00</span>
@@ -365,6 +394,8 @@
                   <small class="countdown__time__label">Minutes</small>
                 </div>
               </div>
+              <!--/.col-*-->
+              <!--.col-*-->
               <div class="col-6 col-md-3">
                 <div class="countdown__time countdown__time--last">
                   <span class="countdown__time__number countdown__time__number--seconds">00</span>
@@ -372,18 +403,31 @@
                   <small class="countdown__time__label">Seconds</small>
                 </div>
               </div>
+              <!--/.col-*-->
             </div>
+            <!--.row-->
+            <!--.row-->
             <div class="row">
+              <!--.col-*-->
               <div class="col-md-12 mt-5">
                 <div class="progress">
                   <div class="progress-bar bg-body" role="progressbar" style="width: 0%" data-progress="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress__label" style="margin-left: 15%">Pre-sale</div>
+                  <div class="progress__label" style="margin-left: 50%">Soft cap</div>
+                  <div class="progress__label" style="margin-left: 80%">Bonus</div>
                 </div>
               </div>
+              <!--/.col-*-->
             </div>
+            <!--/.row-->
+            <!--.row-->
             <div class="row">
+              <!--.col-*-->
               <div class="col-md-8 mx-auto mt-5 mb-3">
                 <button class="btn btn-primary btn-lg w-100">Buy tokens</button>
               </div>
+              <!--/.col-*-->
+              <!--.col-*-->
               <div class="col-md-12 text-center">
                 <ul class="payment-methods">
                   <li>
@@ -400,7 +444,9 @@
                   </li>
                 </ul>
               </div>
+              <!--/.col-*-->
             </div>
+            <!--/.row-->
           </div>
         </div>
         <!--/.col-*-->
@@ -561,9 +607,6 @@
 
   <!--section-->
   <section id="team">
-    <!-- <div id="trace">
-      <object id="trace-svg" type="image/svg+xml" data="img/trace-svg.svg"></object>
-    </div> -->
     <!--.container-->
     <div class="container">
       <!--.row-->
@@ -582,7 +625,7 @@
       <!--.row-->
       <div class="row">
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -616,7 +659,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -650,7 +693,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -684,7 +727,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -722,7 +765,7 @@
       <!--.row-->
       <div class="row">
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -756,7 +799,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -790,7 +833,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -824,7 +867,7 @@
         </div>
         <!--/.col-*-->
         <!--.col-*-->
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 col-lg-3 text-center">
           <!--.member-picture-->
           <div class="member-picture wow fadeIn" data-wow-delay="0.2s">
             <figure class="member-picture__figure">
@@ -1027,9 +1070,8 @@
 
         <!--.col-*-->
         <div class="col-md-6">
-          <!-- <img id="map-svg" src="img/map-svg_w_lines.svg" class="img-fluid"> -->
           <div class="wow fadeIn" id="map-svg" data-wow-delay="0.1s">
-            <object id="map-svg-lines" type="image/svg+xml" data="img/map-svg_w_lines.svg"></object>
+            <object type="image/svg+xml" data="img/map-svg_b.svg"></object>
           </div>
         </div>
         <!--/.col-*-->
@@ -1232,7 +1274,7 @@
 
 
   <!--section-->
-  <section class="parallax-window" id="testimonials" data-parallax="scroll" data-image-src="img/bg-trace2.jpg" style="background:rgba(25,36,126,.9)">
+  <section id="testimonials">
     <!--.container-->
     <div class="container">
       <!--.row-->
@@ -1371,12 +1413,12 @@
         <!--.col-*-->
         <div class="col-lg-6 ml-auto wow fadeIn" data-wow-delay="0.1s">
           <!--#contactForm-->
-          <form id="contactForm" class="mb-5">
+          <form id="contactForm" class="mb-5" action="server/mail.php">
             <fieldset>
               <!--.form-group-->
               <div class="form-group">
                 <label for="exampleInputName">Name</label>
-                <input type="text" name="name" class="form-control form-control-lg" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Your Name">
+                <input type="text" class="form-control form-control-lg" id="exampleInputName" name="name" aria-describedby="nameHelp" placeholder="Enter Your Name">
               </div>
               <!--/.form-group-->
               <!--.form-group-->
@@ -1392,7 +1434,7 @@
                 <textarea class="form-control form-control-lg" id="exampleTextarea" name="message" rows="3"></textarea>
               </div>
               <!--/.form-group-->
-              <button type="submit" class="btn btn-primary btn-lg">Send</button>
+              <button type="submit" class="btn btn-primary btn-lg" name="submit">Send</button>
             </fieldset>
           </form>
           <!--/#contactForm-->
@@ -1641,6 +1683,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
+  <script src="vendor/flat-surface-shader/flat-surface-shader.js"></script>
   <script src="vendor/jquery.scrollspeed/jQuery.scrollSpeed.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/waypoints/jquery.waypoints.min.js"></script>

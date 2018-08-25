@@ -147,3 +147,12 @@ blockquote {
 .bg-body {
   background-color: $primary !important;
 }
+
+#team figure.member-picture__figure figcaption::after, 
+#team figure.member-picture__figure figcaption::before {
+  border-color: rgba($primary, .95);
+}
+
+#team figure.member-picture__figure .member-picture__figure__name span {
+  color: $light;
+}
