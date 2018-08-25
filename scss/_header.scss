@@ -64,6 +64,9 @@ header.intro {
       right: 50px;
       border-radius: 20px;
     }
+    #mobile {
+      top: 45px;
+    }
   }
   @media (min-width: 992px) {
     height: 100vh;
@@ -82,8 +85,12 @@ header.intro {
       right: 100px;
       border-radius: 30px;
     }
+    #mobile {
+      top: 135px;
+    }
   }
-  @media (min-width: 1200px) {
+  
+  @media (min-width: 1400px) {
     h1 {
       font-size: 4rem;
     }

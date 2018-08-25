@@ -9095,6 +9095,9 @@ header.intro #mobile-image.visible {
     right: 50px;
     border-radius: 20px;
   }
+  header.intro #mobile {
+    top: 45px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -9116,9 +9119,12 @@ header.intro #mobile-image.visible {
     right: 100px;
     border-radius: 30px;
   }
+  header.intro #mobile {
+    top: 135px;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   header.intro h1 {
     font-size: 4rem;
   }
