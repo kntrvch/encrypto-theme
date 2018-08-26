@@ -8774,6 +8774,12 @@ section.skew .section__skew--bottom svg {
   bottom: 0;
 }
 
+@media (max-width: 768px) {
+  #map-svg {
+    margin-bottom: 3rem;
+  }
+}
+
 /*
 * === Ticker ===
 */
@@ -9030,6 +9036,7 @@ header.intro h1 {
   font-size: 2rem;
   font-weight: 300;
   margin-top: 10rem;
+  letter-spacing: -3px;
 }
 
 header.intro h1 span {
@@ -9124,7 +9131,7 @@ header.intro #mobile-image.visible {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   header.intro h1 {
     font-size: 4rem;
   }

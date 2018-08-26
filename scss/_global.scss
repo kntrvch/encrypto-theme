@@ -305,3 +305,9 @@ section.skew {
   top: 0; 
   bottom: 0;
 }
+
+@media (max-width: 768px) {
+  #map-svg {
+    margin-bottom: 3rem;
+  }
+}
