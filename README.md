@@ -1,6 +1,6 @@
 # [ENCRYPTO](https://kaiseidesign.com/templates/encrypto/)
 
-[ENCRYPTO](https://kaiseidesign.com/templates/encrypto/) - Multipurpose Landing Page
+[ENCRYPTO](https://kaiseidesign.com/templates/encrypto/) - ICO / Cryptocurrency / Fintech Landing Page
 
 ## Preview
 
@@ -9,10 +9,60 @@
 **[View Live Preview](https://kaiseidesign.com/templates/encrypto/)**
 
 ## About
-ENCRYPTO is a multipurpose landing page, optimized for mobile users to give them best experience.
-This template is ready to apply to a vast array of industries, from small advisory businesses, to medium family shops, to international corporations. Clean and uncluttered design makes your site easy on the user's eye. 
-The latest version of Bootstrap 4 guarantees compatibility with all newest devices.
-You get 6 different variants withing this template, which gives you flexibility with your UX design.
+Encrypto is a slick yet powerful modern template for almost every Fintech startup or Cryptocurrency project. 
+Its versatile elements help you build a site dedicated to your visual scheme for any kind of business: bitcoin, blockchain,  coin exchange, ico, cryptoexchange, online wallet and more.
+
+Encrypto is built with responsiveness in mind: The latest Bootstrap 4 technology ensures the best possible effect on any kind of modern devices and resolutions:
+from desktops through tablets, iPads to iPhones and small smartphones.
+
+Parallax sections and vectorized widgets enable the best possible experience due to light and fast download parameters.
+Thanks to beautiful color schemes, your business will look professional and appealing, and well documented features makes it easy to install for every developer.
+
+## Features
+
+6 Header Variation demos
+Easy to customize
+HTML5 & CSS3
+Clean & Simple Design
+Fully Responsive Layout
+Crossbrowser Compatible with Edge, IE9+, Firefox, Safari, Opera, Chrome
+Retina ready
+Google fonts included
+Font Awesome 400+ icons
+Powered with Bootstrap
+Smooth animation
+Parallax sections
+Working contact form with validation
+Google Maps easy to setup via data attributes
+HTML5 and CSS3 Validated
+Customizable Design & Code
+All installed Plugins are included
+Cross Browser Support
+Detailed Documentation Included
+Full Support
+Multiple Header Variants
+Check Reports
+Well documented
+Various Custom Widgets
+Eye-catching CSS Animations
+Permanent updates
+Excellent Typography
+Optimized for high speed
+Fast and easy to use
+And Much More…
+
+ICO elements:
+- Countdown
+- Timeline
+- Progress bars
+- ICO listing
+- Currency Exchange
+- Live Crypto Prices
+- Ticker
+- Eye-catching Charts 
+- Multi Steps Block
+
+Note: All images are used for preview purpose only and not included in the final purchase files.
 
 ## Credits
 

@@ -9423,6 +9423,8 @@ header.intro #particles-js {
 
 #team figure.member-picture__figure img {
   opacity: 0.85;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 #team figure.member-picture__figure h2 {

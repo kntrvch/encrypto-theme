@@ -123,6 +123,8 @@
   
   figure.member-picture__figure img {
     opacity: 0.85;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
   }
   
   figure.member-picture__figure h2 {
