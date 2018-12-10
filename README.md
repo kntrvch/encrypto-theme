@@ -4,7 +4,8 @@
 
 ## Preview
 
-[![ENCRYPTO Preview](https://kaiseidesign.com/img/templates/encrypto/encrypto.png)](https://kaiseidesign.com/img/templates/encrypto/dark-gradient.png)
+![ENCRYPTO Preview](https://kaiseidesign.com/img/templates/encrypto/dark-gradient.png)
+
 
 **[View Live Preview](https://kaiseidesign.com/templates/encrypto/)**
 
