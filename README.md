@@ -4,7 +4,7 @@
 
 ## Preview
 
-[![ENCRYPTO Preview](https://kaiseidesign.com/img/templates/encrypto/encrypto.png)](https://kaiseidesign.com/templates/encrypto/)
+[![ENCRYPTO Preview](https://kaiseidesign.com/img/templates/encrypto/encrypto.png)](https://kaiseidesign.com/img/templates/encrypto/dark-gradient.png)
 
 **[View Live Preview](https://kaiseidesign.com/templates/encrypto/)**
 
@@ -62,7 +62,6 @@ ICO elements:
 - Eye-catching Charts 
 - Multi Steps Block
 
-Note: All images are used for preview purpose only and not included in the final purchase files.
 
 ## Credits
 
